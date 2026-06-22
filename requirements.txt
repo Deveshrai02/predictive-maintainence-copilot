@@ -1,0 +1,31 @@
+# Deep learning / NLP
+torch
+transformers
+peft
+datasets
+evaluate
+
+# Classical ML / data
+scikit-learn
+pandas
+numpy
+
+# Agent orchestration & LLM
+langgraph
+langchain-aws
+boto3
+
+# Vector store
+weaviate-client
+
+# Experiment tracking
+mlflow
+
+# API & UI
+fastapi
+uvicorn
+streamlit
+
+# Config & validation
+python-dotenv
+pydantic
