@@ -18,7 +18,14 @@ Background for interview context:
 """
 
 import os
-import pandas as pd
+
+try:
+  import pandas as pd  # type: ignore[import]
+except ImportError as e:
+  raise RuntimeError(
+    "pandas is required to run this script. Install dependencies with: \n"
+    "  pip install -r requirements.txt"
+  ) from e
 
 # --- File locations -------------------------------------------------------
 RAW_PATH = "data/cmapss/train_FD001.txt"
