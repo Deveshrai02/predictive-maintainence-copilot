@@ -13,3 +13,36 @@ services:
       - "8501:8501"
     env_file:
       - .env
+
+  # Vector database. 8080 = REST/HTTP, 50051 = gRPC (the v4 client uses both).
+  weaviate:
+    image: weaviate/weaviate:latest
+    ports:
+      - "8080:8080"
+      - "50051:50051"
+    restart: on-failure:0
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      # Local dev only: no auth. Lock this down before any real deployment.
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      # Turn on the embedding module and make it the default vectoriser.
+      ENABLE_MODULES: 'text2vec-transformers'
+      DEFAULT_VECTORIZER_MODULE: 'text2vec-transformers'
+      # Where Weaviate sends text to be embedded — the sidecar below.
+      TRANSFORMERS_INFERENCE_API: 'http://t2v-transformers:8080'
+      CLUSTER_HOSTNAME: 'node1'
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+    depends_on:
+      - t2v-transformers
+
+  # The actual embedding model server (all-MiniLM-L6-v2). text2vec-transformers
+  # in Weaviate is only a client; this container holds and runs the model.
+  t2v-transformers:
+    image: cr.weaviate.io/semitechnologies/transformers-inference:sentence-transformers-all-MiniLM-L6-v2
+    environment:
+      ENABLE_CUDA: '0'   # CPU inference; set to 1 if a GPU is available.
+
+volumes:
+  weaviate_data:
