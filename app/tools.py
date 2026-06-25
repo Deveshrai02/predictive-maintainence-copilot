@@ -41,7 +41,14 @@ def classify_fault(log_text: str) -> dict:
     Use this whenever a free-text maintenance log entry is available. Returns
     the predicted fault_category and a confidence score (0-1).
     """
-    return classifier.classify_log(log_text)
+    # classifier.classify() returns predicted_category/confidence/all_scores;
+    # we surface it as fault_category for consistency with the rest of the agent.
+    result = classifier.classify(log_text)
+    return {
+        "fault_category": result.get("predicted_category"),
+        "confidence": result.get("confidence"),
+        "all_scores": result.get("all_scores", {}),
+    }
 
 
 # --------------------------------------------------------------------------- #
