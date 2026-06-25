@@ -5,6 +5,12 @@ services:
       - "8000:8000"
     env_file:
       - .env
+    # Inside the compose network, reach Weaviate by service name (overrides any
+    # localhost value in .env, which only applies when running on the host).
+    environment:
+      - WEAVIATE_URL=http://weaviate:8080
+    depends_on:
+      - weaviate
 
   streamlit:
     build: .
@@ -13,6 +19,10 @@ services:
       - "8501:8501"
     env_file:
       - .env
+    environment:
+      - WEAVIATE_URL=http://weaviate:8080
+    depends_on:
+      - weaviate
 
   # Vector database. 8080 = REST/HTTP, 50051 = gRPC (the v4 client uses both).
   weaviate:
