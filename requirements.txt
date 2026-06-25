@@ -13,6 +13,7 @@ numpy
 # Agent orchestration & LLM
 langgraph
 langchain-aws
+langchain  # umbrella pkg; required for mlflow.langchain.autolog() tracing
 boto3
 
 # Vector store
