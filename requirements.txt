@@ -12,7 +12,7 @@ numpy
 
 # Agent orchestration & LLM
 langgraph
-langchain-aws
+langchain-anthropic  # ChatAnthropic — calls Claude via the Anthropic API
 langchain  # umbrella pkg; required for mlflow.langchain.autolog() tracing
 boto3
 

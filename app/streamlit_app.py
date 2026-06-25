@@ -10,7 +10,13 @@ The heavy lifting lives in the other modules; this file is presentation only:
 """
 
 import os
+import sys
 import re
+
+# When launched via `streamlit run app/streamlit_app.py`, Streamlit puts the
+# app/ directory (not the project root) on sys.path, so `import app.*` fails.
+# Insert the project root up front so the package resolves either way.
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import pandas as pd
 import streamlit as st

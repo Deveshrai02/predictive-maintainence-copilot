@@ -1,31 +1,4 @@
-"""LangGraph agent orchestration for the predictive maintenance copilot.
 
-Graph shape:
-
-    START
-      |
-      v
-  classify_and_retrieve  <-------------------+
-      |        |                             |
-   (tool?)  (answer?)                        | (confidence < 6:
-      |        |                             |  loop with evidence gaps)
-      v        v                             |
-    tools    reflect ---------(>= 6 or max)--+--> END
-      |        ^
-      +--------+   (tools always return to the agent)
-
-Key ideas:
-  * classify_and_retrieve = the reasoning agent (Bedrock Claude 3 Haiku) with
-    all four tools bound. It decides which tool to call, or writes a draft
-    diagnosis when it has enough evidence.
-  * reflect = a SEPARATE self-critique node (its own Bedrock call, no tools)
-    that scores confidence 1-10 and lists evidence gaps.
-  * If confidence is low we loop back with the gaps appended, up to 3 times.
-
-Built against current LangGraph + langchain-aws APIs:
-  ChatBedrockConverse (Bedrock Converse API, supports tool calling),
-  StateGraph + add_messages reducer, prebuilt ToolNode.
-"""
 
 import os
 import re
@@ -36,7 +9,7 @@ from typing_extensions import TypedDict
 from langchain_core.messages import (
     SystemMessage, HumanMessage, AIMessage, ToolMessage, BaseMessage,
 )
-from langchain_aws import ChatBedrockConverse
+from langchain_anthropic import ChatAnthropic
 from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
@@ -48,8 +21,10 @@ from app.tools import TOOLS
 # --------------------------------------------------------------------------- #
 # Configuration
 # --------------------------------------------------------------------------- #
-BEDROCK_MODEL_ID = "anthropic.claude-3-haiku-20240307-v1:0"
-AWS_REGION = os.getenv("AWS_REGION", "us-east-1")
+# Default to the most capable Opus model; override via the ANTHROPIC_MODEL env
+# var. For a cheaper/faster agent loop (closer to the original Bedrock Haiku),
+# set ANTHROPIC_MODEL=claude-haiku-4-5.
+ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-opus-4-8")
 MAX_ITERATIONS = 3          # max self-reflection loops before we stop
 CONFIDENCE_THRESHOLD = 6    # >= this ends the graph; < this triggers a re-loop
 
@@ -94,12 +69,14 @@ class AgentState(TypedDict):
 # Bedrock models (one with tools for the agent, one plain for reflection)
 # --------------------------------------------------------------------------- #
 def _make_llm():
-    # temperature=0 for stable, reproducible diagnostics.
-    return ChatBedrockConverse(
-        model=BEDROCK_MODEL_ID,
-        region_name=AWS_REGION,
-        temperature=0,
+    # Reads ANTHROPIC_API_KEY from the environment. We deliberately do NOT set
+    # temperature/top_p: Opus 4.7/4.8 reject sampling params with a 400. If you
+    # switch ANTHROPIC_MODEL to an older model and want determinism, add it back.
+    return ChatAnthropic(
+        model=ANTHROPIC_MODEL,
         max_tokens=1024,
+        timeout=60,
+        max_retries=2,
     )
 
 
@@ -317,7 +294,7 @@ def run_agent(equipment_id: str, log_entry: Optional[str] = None) -> dict:
         mlflow.log_params({
             "equipment_id": equipment_id,
             "log_entry": (log_entry or "")[:250],  # params have length limits
-            "model_id": BEDROCK_MODEL_ID,
+            "model_id": ANTHROPIC_MODEL,
         })
 
         # recursion_limit must comfortably exceed our 3 loops x (agent+tools).

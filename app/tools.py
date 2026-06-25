@@ -67,8 +67,11 @@ def retrieve_similar_incidents(
     """
     from weaviate.classes.query import Filter, MetadataQuery
 
-    client = _connect_weaviate()
+    # Connect INSIDE the try so a Weaviate outage degrades to an error result
+    # the agent can reason about, instead of crashing the whole diagnosis.
+    client = None
     try:
+        client = _connect_weaviate()
         collection = client.collections.get(COLLECTION_NAME)
 
         # If a category was given, add a server-side WHERE filter so we only
@@ -99,9 +102,10 @@ def retrieve_similar_incidents(
             })
         return incidents
     except Exception as exc:  # noqa: BLE001 - degrade gracefully for the agent
-        return [{"error": f"retrieval failed: {exc}"}]
+        return [{"error": f"retrieval unavailable: {exc}"}]
     finally:
-        client.close()
+        if client is not None:
+            client.close()
 
 
 # --------------------------------------------------------------------------- #

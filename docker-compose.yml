@@ -26,7 +26,9 @@ services:
 
   # Vector database. 8080 = REST/HTTP, 50051 = gRPC (the v4 client uses both).
   weaviate:
-    image: weaviate/weaviate:latest
+    # Official image lives on Weaviate's registry, not the weaviate/ Docker Hub
+    # namespace (which doesn't exist).
+    image: cr.weaviate.io/semitechnologies/weaviate:latest
     ports:
       - "8080:8080"
       - "50051:50051"
