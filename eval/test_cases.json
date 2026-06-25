@@ -1,1 +1,142 @@
-[]
+[
+  {
+    "test_id": "TC-01",
+    "equipment_id": "1",
+    "log_entry": "DE bearing running hot at 84C, audible growl at 1480 rpm. Vibration band 2x line freq elevated, trending up over 3 shifts.",
+    "expected_fault_category": "bearing_fault",
+    "notes": "Classic outer/inner race signature: high housing temp + growl + 2x-line-freq vibration. Resolution should reference bearing replacement and re-greasing."
+  },
+  {
+    "test_id": "TC-02",
+    "equipment_id": "7",
+    "log_entry": "NDE bearing vibration trending up to 7.8 mm/s RMS over 3 shifts. Slight axial play felt by hand on the cooling tower fan.",
+    "expected_fault_category": "bearing_fault",
+    "notes": "Rising RMS vibration plus axial play indicates bearing wear. Correct answer should cite vibration trend and recommend bearing change at next PM."
+  },
+  {
+    "test_id": "TC-03",
+    "equipment_id": "23",
+    "log_entry": "Outer race spalling suspected on conveyor head pulley. Grease purge showed metal flake. Noise increases under load.",
+    "expected_fault_category": "bearing_fault",
+    "notes": "Metal flake in grease + load-dependent noise is strong bearing-fault evidence. Should recommend bearing/seal swap and coupling alignment."
+  },
+  {
+    "test_id": "TC-04",
+    "equipment_id": "44",
+    "log_entry": "Rumble at the drive end on extruder 2, inner race defect frequency present in FFT. Bearing noise rises under load.",
+    "expected_fault_category": "bearing_fault",
+    "notes": "FFT inner-race defect frequency is a definitive bearing indicator. Should reference spectral evidence and bearing replacement."
+  },
+  {
+    "test_id": "TC-05",
+    "equipment_id": "12",
+    "log_entry": "Gearbox oil level below min on sight glass, slight weep at output seal. Oil dark and overdue for change on line 3 drive.",
+    "expected_fault_category": "lubrication_issue",
+    "notes": "Low oil + seal weep + degraded oil. Resolution should top up oil, address the seal weep, and schedule an oil change."
+  },
+  {
+    "test_id": "TC-06",
+    "equipment_id": "31",
+    "log_entry": "Auto-luber empty on line 3 drive, no grease delivered for 2 days. Bearing temp creeping up.",
+    "expected_fault_category": "lubrication_issue",
+    "notes": "Root cause is starved lubrication from an empty auto-luber, not the bearing itself. Refill/reset luber and verify grease delivery before temp causes damage."
+  },
+  {
+    "test_id": "TC-07",
+    "equipment_id": "58",
+    "log_entry": "Oil sample flagged high particle count, ISO code out of spec. Filter dP high and bypass open on the main compressor.",
+    "expected_fault_category": "lubrication_issue",
+    "notes": "Contaminated oil + clogged filter in bypass. Should change oil and filter and re-sample; references particle count / ISO code."
+  },
+  {
+    "test_id": "TC-08",
+    "equipment_id": "66",
+    "log_entry": "No oil flow indicated at the pump, grease line blocked to bearing in the mixing area.",
+    "expected_fault_category": "lubrication_issue",
+    "notes": "Blocked lubrication delivery path. Should clear the line, confirm flow, and monitor the affected bearing."
+  },
+  {
+    "test_id": "TC-09",
+    "equipment_id": "9",
+    "log_entry": "VFD tripped on overcurrent, fault F012. Motor megger 2.1 Mohm marginal, phase imbalance ~6% on line 2.",
+    "expected_fault_category": "electrical_fault",
+    "notes": "Overcurrent trip + marginal insulation + phase imbalance point to motor/drive electrical issue. Should reference megger retest and VFD reset."
+  },
+  {
+    "test_id": "TC-10",
+    "equipment_id": "27",
+    "log_entry": "Contactor chattering on starter, coil voltage low. Aux contact pitted, intermittent drop-out under load.",
+    "expected_fault_category": "electrical_fault",
+    "notes": "Control-circuit fault: chattering contactor and pitted aux contact. Should recommend contactor replacement and coil-voltage check."
+  },
+  {
+    "test_id": "TC-11",
+    "equipment_id": "40",
+    "log_entry": "Heater element open on circuit 4, no current draw. Thermal overload reset would not hold.",
+    "expected_fault_category": "electrical_fault",
+    "notes": "Open heater element / failed overload. Should swap the element and verify balanced current draw."
+  },
+  {
+    "test_id": "TC-12",
+    "equipment_id": "73",
+    "log_entry": "Loose lug on terminal B2, discoloration and heat. Ground fault on feeder, trip on close at the packaging line.",
+    "expected_fault_category": "electrical_fault",
+    "notes": "Loose/overheated termination and ground fault. Should re-terminate, torque to spec, and thermal-scan after."
+  },
+  {
+    "test_id": "TC-13",
+    "equipment_id": "15",
+    "log_entry": "Flow transmitter reading 4% high vs reference. Zero drifted, last cal 14 months ago. Loop check ok.",
+    "expected_fault_category": "calibration_drift",
+    "notes": "Instrument reads high with a healthy loop and overdue cal date -> drift, not a process fault. Should re-zero/trim span and update cal record."
+  },
+  {
+    "test_id": "TC-14",
+    "equipment_id": "52",
+    "log_entry": "Temp RTD on reactor showing 3C offset vs handheld. Drift linear across range since last PM.",
+    "expected_fault_category": "calibration_drift",
+    "notes": "Consistent linear offset vs a trusted reference is calibration drift. Should recalibrate or replace the RTD and verify the loop."
+  },
+  {
+    "test_id": "TC-15",
+    "equipment_id": "88",
+    "log_entry": "Load cell on hopper out of cal, weight readback off by 12 kg. Span needs re-trim.",
+    "expected_fault_category": "calibration_drift",
+    "notes": "Weight readback error with a span-trim need is a calibration issue. Should re-trim span and verify against test weights."
+  },
+  {
+    "test_id": "TC-16",
+    "equipment_id": "19",
+    "log_entry": "PLC comms dropout to remote IO rack, watchdog timeout. HMI froze and recovered on restart.",
+    "expected_fault_category": "software_anomaly",
+    "notes": "Control-system/comms fault, not mechanical. Should restart the IO scanner, restore comms, and add a watchdog alarm."
+  },
+  {
+    "test_id": "TC-17",
+    "equipment_id": "35",
+    "log_entry": "Batch sequence stuck on step 7, logic waiting on a flag that never set. Manual force to advance.",
+    "expected_fault_category": "software_anomaly",
+    "notes": "Logic/sequencing bug. Should patch the logic for the missing flag and retest the batch."
+  },
+  {
+    "test_id": "TC-18",
+    "equipment_id": "61",
+    "log_entry": "SCADA tag quality bad on 6 points after firmware update, driver mismatch suspected. Timestamp skew between PLC and historian.",
+    "expected_fault_category": "software_anomaly",
+    "notes": "Post-update driver/firmware mismatch causing bad tag quality. Should reload matching driver, document firmware rev, and verify tag quality."
+  },
+  {
+    "test_id": "TC-19",
+    "equipment_id": "48",
+    "log_entry": "Bearing temp creeping up and vibration slightly elevated, but auto-luber reservoir found empty. Unclear if the bearing is failing or just starved of grease.",
+    "expected_fault_category": "lubrication_issue",
+    "notes": "AMBIGUOUS: symptoms read like bearing_fault (temp + vibration) but the empty auto-luber points to lubrication_issue as the root cause. A correct answer should note the overlap, prioritize refilling/verifying lubrication, and recommend re-checking vibration before condemning the bearing."
+  },
+  {
+    "test_id": "TC-20",
+    "equipment_id": "84",
+    "log_entry": "VFD faulting intermittently and motor vibration is up; encoder signal dropping at speed. Could be a drive/electrical issue or a mechanical bearing problem feeding back through the encoder.",
+    "expected_fault_category": "electrical_fault",
+    "notes": "AMBIGUOUS: encoder signal dropout + VFD faults suggest electrical_fault, but elevated motor vibration could indicate bearing_fault. A correct answer should acknowledge both, recommend checking the encoder/drive wiring first while trending vibration, and avoid committing to one cause without more evidence."
+  }
+]

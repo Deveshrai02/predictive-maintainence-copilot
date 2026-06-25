@@ -1,0 +1,67 @@
+{
+  "summary": {
+    "timestamp": "2026-06-25T22:24:34",
+    "total_cases": 3,
+    "cases_scored": 3,
+    "pipeline_errors": 0,
+    "classifier_accuracy": 0.0,
+    "retrieval_coverage": 1.0,
+    "avg_confidence": 6.67,
+    "avg_iterations": 1.67,
+    "flagged_count": 0,
+    "per_category_accuracy": {
+      "bearing_fault": {
+        "total": 3,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "results": [
+    {
+      "test_id": "TC-01",
+      "equipment_id": "1",
+      "expected_category": "bearing_fault",
+      "predicted_category": "unknown",
+      "correct": false,
+      "confidence_score": 7,
+      "iterations_taken": 2,
+      "similar_incidents_found": 5,
+      "flags": [],
+      "flagged": false,
+      "is_ambiguous": false,
+      "error": null,
+      "final_answer": "This is very informative. Let me synthesize what these probes revealed and present a properly calibrated revised diagnosis.\n\n---\n\n# Revised Diagnosis \u2014 Equipment 1\n\n## Confidence: **7/10** (up from 5/10) \u2014 directionally bearing fault, with explicit caveats\n\n---\n\n## Addressing the Evidence Gaps\n\n### Gap #1 \u2014 Data provenance (the critical one): RESOLVED\nI re-examined the inputs carefully. The \"**84\u00b0C / growl at 1480 rpm / 2x-line-freq vibration trending up**\" details come from the **maintenance-log entry the user supplied**, not from Equipment 1's sensor stream and not confabulated from retrieve"
+    },
+    {
+      "test_id": "TC-02",
+      "equipment_id": "7",
+      "expected_category": "bearing_fault",
+      "predicted_category": "unknown",
+      "correct": false,
+      "confidence_score": 6,
+      "iterations_taken": 1,
+      "similar_incidents_found": 5,
+      "flags": [],
+      "flagged": false,
+      "is_ambiguous": false,
+      "error": null,
+      "final_answer": "## Diagnosis \u2014 Equipment 7 (Cooling Tower Fan)\n\n**Likely fault: Non-drive-end (NDE) bearing degradation / bearing fault, with axial looseness.**\n\n### Supporting Evidence\n\n**1. Anomaly signal \u2014 CRITICAL**\n- `anomaly_detected: true`, severity **critical**.\n- `current_rul_estimate: 0` cycles \u2014 the model considers this machine at end-of-life. This is a **run-to-failure** condition; immediate action is warranted.\n\n**2. Sensor trend \u2014 degradation confirmed**\n- Over the last 10 cycles, **RUL falls steadily 9 \u2192 0**, consistent with a progressing failure rather than a transient. Process sensors (s2, s3"
+    },
+    {
+      "test_id": "TC-03",
+      "equipment_id": "23",
+      "expected_category": "bearing_fault",
+      "predicted_category": "unknown",
+      "correct": false,
+      "confidence_score": 7,
+      "iterations_taken": 2,
+      "similar_incidents_found": 5,
+      "flags": [],
+      "flagged": false,
+      "is_ambiguous": false,
+      "error": null,
+      "final_answer": "I now have materially better grounding. Let me revise the diagnosis honestly, addressing each self-review gap.\n\n---\n\n## Revised Diagnosis \u2014 Equipment 23: Bearing Fault with Active Material Loss (race localization UNCONFIRMED)\n\n### What I corrected from the prior pass\nI previously titled this \"Outer-Race Spalling\" with false specificity and waved away contradicting signals. The revised diagnosis is more cautious and traces every symptom to its actual source.\n\n---\n\n### Symptom provenance (addressing Gap #4 \u2014 circular reasoning)\nTracing each symptom to Equipment 23's **own** log vs. imported from"
+    }
+  ]
+}
