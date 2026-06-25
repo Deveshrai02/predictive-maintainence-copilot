@@ -1,0 +1,2027 @@
+[
+  {
+    "log_id": "LOG-0208",
+    "timestamp": "2024-11-08T19:04:00",
+    "equipment_id": "DRIVE-LINE2-B",
+    "fault_category": "software_anomaly",
+    "log_text": "HMI froze, recovered on restart. recipe download failed checksum on the cooling tower fan.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 25
+  },
+  {
+    "log_id": "LOG-0149",
+    "timestamp": "2025-02-07T07:13:00",
+    "equipment_id": "DRIVE-LINE2-A",
+    "fault_category": "calibration_drift",
+    "log_text": "pressure tx span out of trim on the main compressor.",
+    "resolution": "Re-zeroed and trimmed span, loop verified against reference.",
+    "downtime_minutes": 28
+  },
+  {
+    "log_id": "LOG-0165",
+    "timestamp": "2025-12-27T22:15:00",
+    "equipment_id": "GEARBOX-04",
+    "fault_category": "calibration_drift",
+    "log_text": "pressure tx span out of trim at the conveyor head pulley.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 87
+  },
+  {
+    "log_id": "LOG-0015",
+    "timestamp": "2024-10-07T11:12:00",
+    "equipment_id": "CONV-BELT-05",
+    "fault_category": "bearing_fault",
+    "log_text": "audible growl at 1480 rpm. NDE bearing vibration up to 8.5 mm/s RMS on the cooling tower fan.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 285
+  },
+  {
+    "log_id": "LOG-0167",
+    "timestamp": "2023-07-16T22:37:00",
+    "equipment_id": "EXTRUDER-2",
+    "fault_category": "calibration_drift",
+    "log_text": "On extruder 4: load cell off by 17 kg on readback. 4-20 loop reads low at 50% span.",
+    "resolution": "Recalibrated transmitter, updated cal record, within tolerance.",
+    "downtime_minutes": 65
+  },
+  {
+    "log_id": "LOG-0026",
+    "timestamp": "2025-03-10T20:31:00",
+    "equipment_id": "MOTOR-10",
+    "fault_category": "bearing_fault",
+    "log_text": "vibration band 2x line freq elevated. rumble at the drive end on the palletizer.",
+    "resolution": "Replaced bearing, re-greased to spec, vibration back to 7.0 mm/s.",
+    "downtime_minutes": 320
+  },
+  {
+    "log_id": "LOG-0037",
+    "timestamp": "2025-01-09T09:28:00",
+    "equipment_id": "RTD-REACT-15",
+    "fault_category": "bearing_fault",
+    "log_text": "DE bearing running hot at 73C. axial play felt by hand on extruder 1.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 475
+  },
+  {
+    "log_id": "LOG-0155",
+    "timestamp": "2024-01-25T09:02:00",
+    "equipment_id": "DRIVE-LINE4-B",
+    "fault_category": "calibration_drift",
+    "log_text": "analyzer out of spec vs grab sample. zero drifted, last cal 7 months ago on the packaging line.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 24
+  },
+  {
+    "log_id": "LOG-0206",
+    "timestamp": "2023-08-30T12:45:00",
+    "equipment_id": "DRIVE-LINE1-A",
+    "fault_category": "software_anomaly",
+    "log_text": "On extruder 1: OPC server lost connection intermittently. timestamp skew between PLC and historian.",
+    "resolution": "Restarted IO scanner, comms restored, added watchdog alarm.",
+    "downtime_minutes": 86
+  },
+  {
+    "log_id": "LOG-0132",
+    "timestamp": "2024-07-03T09:00:00",
+    "equipment_id": "VFD-LINE2",
+    "fault_category": "electrical_fault",
+    "log_text": "motor megger 3.8 Mohm, marginal on the packaging line.",
+    "resolution": "Megger retest after dry-out, motor back in spec, reset VFD.",
+    "downtime_minutes": 47
+  },
+  {
+    "log_id": "LOG-0187",
+    "timestamp": "2024-12-16T22:02:00",
+    "equipment_id": "GEARBOX-22",
+    "fault_category": "software_anomaly",
+    "log_text": "On pump skid 4: OPC server lost connection intermittently.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 226
+  },
+  {
+    "log_id": "LOG-0001",
+    "timestamp": "2025-12-30T08:02:00",
+    "equipment_id": "EXTRUDER-6",
+    "fault_category": "bearing_fault",
+    "log_text": "In the mixing area: NDE bearing vibration up to 8.9 mm/s RMS. DE bearing running hot at 72C.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 123
+  },
+  {
+    "log_id": "LOG-0198",
+    "timestamp": "2024-05-14T13:10:00",
+    "equipment_id": "GEARBOX-09",
+    "fault_category": "software_anomaly",
+    "log_text": "driver mismatch after firmware update. HMI froze, recovered on restart on the main compressor.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 182
+  },
+  {
+    "log_id": "LOG-0140",
+    "timestamp": "2024-09-21T18:10:00",
+    "equipment_id": "DRIVE-LINE5-A",
+    "fault_category": "calibration_drift",
+    "log_text": "In the utilities building: flow transmitter reading 5% high vs reference.",
+    "resolution": "Re-zeroed and trimmed span, loop verified against reference.",
+    "downtime_minutes": 55
+  },
+  {
+    "log_id": "LOG-0145",
+    "timestamp": "2025-05-08T11:20:00",
+    "equipment_id": "PUMP-SKID-21",
+    "fault_category": "calibration_drift",
+    "log_text": "On the packaging line: level reading creeping vs manual dip. flow transmitter reading 7% high vs reference.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 89
+  },
+  {
+    "log_id": "LOG-0184",
+    "timestamp": "2025-06-15T18:28:00",
+    "equipment_id": "PUMP-SKID-15",
+    "fault_category": "software_anomaly",
+    "log_text": "SCADA tag quality bad on 11 points. batch sequence stuck on step 11 on pump skid 6.",
+    "resolution": "Restarted IO scanner, comms restored, added watchdog alarm.",
+    "downtime_minutes": 85
+  },
+  {
+    "log_id": "LOG-0079",
+    "timestamp": "2023-02-04T15:40:00",
+    "equipment_id": "PUMP-SKID-17",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the cooling tower fan: auto-luber empty, no grease for 5 days.",
+    "resolution": "Topped up oil, traced and fixed seal weep, logged for reseal.",
+    "downtime_minutes": 32
+  },
+  {
+    "log_id": "LOG-0032",
+    "timestamp": "2025-01-14T12:55:00",
+    "equipment_id": "VFD-LINE3",
+    "fault_category": "bearing_fault",
+    "log_text": "On extruder 2: audible growl at 1180 rpm. vibration band 2x line freq elevated.",
+    "resolution": "Pressed in new bearing, checked fit and clearance, returned to service.",
+    "downtime_minutes": 378
+  },
+  {
+    "log_id": "LOG-0216",
+    "timestamp": "2024-05-02T07:27:00",
+    "equipment_id": "GEARBOX-08",
+    "fault_category": "software_anomaly",
+    "log_text": "driver mismatch after firmware update. recipe download failed checksum on the main compressor.",
+    "resolution": "Forced step to advance, patched logic for missing flag, retested batch.",
+    "downtime_minutes": 10
+  },
+  {
+    "log_id": "LOG-0003",
+    "timestamp": "2025-10-20T19:22:00",
+    "equipment_id": "GEARBOX-09",
+    "fault_category": "bearing_fault",
+    "log_text": "bearing noise rises under load. NDE bearing vibration up to 10.3 mm/s RMS on extruder 3.",
+    "resolution": "Pressed in new bearing, checked fit and clearance, returned to service.",
+    "downtime_minutes": 120
+  },
+  {
+    "log_id": "LOG-0157",
+    "timestamp": "2024-10-03T07:51:00",
+    "equipment_id": "DRIVE-LINE4-A",
+    "fault_category": "calibration_drift",
+    "log_text": "4-20 loop reads low at 50% span. flow transmitter reading 3% high vs reference on the packaging line.",
+    "resolution": "Re-zeroed and trimmed span, loop verified against reference.",
+    "downtime_minutes": 82
+  },
+  {
+    "log_id": "LOG-0047",
+    "timestamp": "2023-06-12T08:21:00",
+    "equipment_id": "CONV-BELT-07",
+    "fault_category": "lubrication_issue",
+    "log_text": "auto-luber empty, no grease for 3 days on the palletizer.",
+    "resolution": "Refilled and reset auto-luber, verified grease delivery at the point.",
+    "downtime_minutes": 42
+  },
+  {
+    "log_id": "LOG-0061",
+    "timestamp": "2025-09-26T14:13:00",
+    "equipment_id": "CONV-BELT-14",
+    "fault_category": "lubrication_issue",
+    "log_text": "oil sample high particle count, ISO out of spec. oil temp high, viscosity dropping on the packaging line.",
+    "resolution": "Topped up oil, traced and fixed seal weep, logged for reseal.",
+    "downtime_minutes": 164
+  },
+  {
+    "log_id": "LOG-0201",
+    "timestamp": "2023-04-05T12:33:00",
+    "equipment_id": "PLC-RACK-15",
+    "fault_category": "software_anomaly",
+    "log_text": "OPC server lost connection intermittently in the utilities building.",
+    "resolution": "Cycled OPC server, reseated network, monitored for recurrence.",
+    "downtime_minutes": 23
+  },
+  {
+    "log_id": "LOG-0191",
+    "timestamp": "2024-01-18T17:09:00",
+    "equipment_id": "PUMP-SKID-19",
+    "fault_category": "software_anomaly",
+    "log_text": "timestamp skew between PLC and historian on the main compressor.",
+    "resolution": "Cycled OPC server, reseated network, monitored for recurrence.",
+    "downtime_minutes": 135
+  },
+  {
+    "log_id": "LOG-0062",
+    "timestamp": "2023-12-23T21:50:00",
+    "equipment_id": "GEARBOX-23",
+    "fault_category": "lubrication_issue",
+    "log_text": "At the conveyor head pulley: gearbox oil level below min on sight glass. oil dark and overdue for change.",
+    "resolution": "Topped up oil, traced and fixed seal weep, logged for reseal.",
+    "downtime_minutes": 157
+  },
+  {
+    "log_id": "LOG-0074",
+    "timestamp": "2024-05-08T08:35:00",
+    "equipment_id": "PLC-RACK-05",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the packaging line: oil sample high particle count, ISO out of spec. gearbox oil level below min on sight glass.",
+    "resolution": "Refilled and reset auto-luber, verified grease delivery at the point.",
+    "downtime_minutes": 174
+  },
+  {
+    "log_id": "LOG-0020",
+    "timestamp": "2024-06-30T22:04:00",
+    "equipment_id": "MOTOR-02",
+    "fault_category": "bearing_fault",
+    "log_text": "On extruder 1: housing temp trending up over 6 shifts.",
+    "resolution": "Pressed in new bearing, checked fit and clearance, returned to service.",
+    "downtime_minutes": 452
+  },
+  {
+    "log_id": "LOG-0148",
+    "timestamp": "2024-09-03T15:44:00",
+    "equipment_id": "RTD-REACT-06",
+    "fault_category": "calibration_drift",
+    "log_text": "At the conveyor head pulley: temp RTD showing 4C offset vs handheld.",
+    "resolution": "Re-zeroed and trimmed span, loop verified against reference.",
+    "downtime_minutes": 116
+  },
+  {
+    "log_id": "LOG-0089",
+    "timestamp": "2025-11-29T08:39:00",
+    "equipment_id": "VFD-LINE6",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the packaging line: oil sample high particle count, ISO out of spec.",
+    "resolution": "Refilled and reset auto-luber, verified grease delivery at the point.",
+    "downtime_minutes": 36
+  },
+  {
+    "log_id": "LOG-0088",
+    "timestamp": "2025-05-08T13:05:00",
+    "equipment_id": "GEARBOX-19",
+    "fault_category": "lubrication_issue",
+    "log_text": "At the reactor feed: water ingress in sump, oil milky. weep at output seal.",
+    "resolution": "Topped up oil, traced and fixed seal weep, logged for reseal.",
+    "downtime_minutes": 124
+  },
+  {
+    "log_id": "LOG-0156",
+    "timestamp": "2024-03-26T14:24:00",
+    "equipment_id": "VFD-LINE6",
+    "fault_category": "calibration_drift",
+    "log_text": "load cell off by 19 kg on readback on the palletizer.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 24
+  },
+  {
+    "log_id": "LOG-0090",
+    "timestamp": "2023-07-25T21:22:00",
+    "equipment_id": "GEARBOX-11",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the cooling tower fan: weep at output seal.",
+    "resolution": "Cleared blocked grease line, purged bearing, confirmed flow.",
+    "downtime_minutes": 110
+  },
+  {
+    "log_id": "LOG-0154",
+    "timestamp": "2023-09-23T22:47:00",
+    "equipment_id": "PLC-RACK-10",
+    "fault_category": "calibration_drift",
+    "log_text": "On pump skid 6: analyzer out of spec vs grab sample. flow transmitter reading 2% high vs reference.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 60
+  },
+  {
+    "log_id": "LOG-0073",
+    "timestamp": "2025-12-18T14:03:00",
+    "equipment_id": "RTD-REACT-04",
+    "fault_category": "lubrication_issue",
+    "log_text": "gearbox oil level below min on sight glass on pump skid 2.",
+    "resolution": "Changed oil and filter, took fresh sample, dP back to normal.",
+    "downtime_minutes": 120
+  },
+  {
+    "log_id": "LOG-0083",
+    "timestamp": "2025-01-09T15:30:00",
+    "equipment_id": "PLC-RACK-02",
+    "fault_category": "lubrication_issue",
+    "log_text": "water ingress in sump, oil milky. gearbox oil level below min on sight glass in the mixing area.",
+    "resolution": "Topped up oil, traced and fixed seal weep, logged for reseal.",
+    "downtime_minutes": 170
+  },
+  {
+    "log_id": "LOG-0133",
+    "timestamp": "2024-01-03T07:43:00",
+    "equipment_id": "VFD-LINE2",
+    "fault_category": "electrical_fault",
+    "log_text": "At the conveyor head pulley: contactor chattering on starter.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 106
+  },
+  {
+    "log_id": "LOG-0008",
+    "timestamp": "2024-06-06T18:46:00",
+    "equipment_id": "CONV-BELT-13",
+    "fault_category": "bearing_fault",
+    "log_text": "outer race spalling suspected at the reactor feed.",
+    "resolution": "Repacked grease, monitored temp, scheduled bearing change at next PM.",
+    "downtime_minutes": 204
+  },
+  {
+    "log_id": "LOG-0222",
+    "timestamp": "2024-06-01T14:47:00",
+    "equipment_id": "DRIVE-LINE2-A",
+    "fault_category": "software_anomaly",
+    "log_text": "recipe download failed checksum in the utilities building.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 157
+  },
+  {
+    "log_id": "LOG-0021",
+    "timestamp": "2024-05-25T10:42:00",
+    "equipment_id": "EXTRUDER-1",
+    "fault_category": "bearing_fault",
+    "log_text": "bearing noise rises under load on extruder 6.",
+    "resolution": "Replaced bearing, re-greased to spec, vibration back to 9.4 mm/s.",
+    "downtime_minutes": 436
+  },
+  {
+    "log_id": "LOG-0093",
+    "timestamp": "2025-11-30T15:17:00",
+    "equipment_id": "EXTRUDER-3",
+    "fault_category": "electrical_fault",
+    "log_text": "On the palletizer: aux contact pitted.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 53
+  },
+  {
+    "log_id": "LOG-0086",
+    "timestamp": "2025-08-14T13:04:00",
+    "equipment_id": "PUMP-SKID-04",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the cooling tower fan: water ingress in sump, oil milky. filter dP high, bypass open.",
+    "resolution": "Changed oil and filter, took fresh sample, dP back to normal.",
+    "downtime_minutes": 21
+  },
+  {
+    "log_id": "LOG-0100",
+    "timestamp": "2024-05-31T19:56:00",
+    "equipment_id": "DRIVE-LINE6-B",
+    "fault_category": "electrical_fault",
+    "log_text": "encoder signal dropping, drive faults on line 3 drive.",
+    "resolution": "Replaced contactor, checked coil voltage, no further chatter.",
+    "downtime_minutes": 113
+  },
+  {
+    "log_id": "LOG-0039",
+    "timestamp": "2024-03-30T15:36:00",
+    "equipment_id": "MOTOR-16",
+    "fault_category": "bearing_fault",
+    "log_text": "On extruder 6: bearing noise rises under load.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 465
+  },
+  {
+    "log_id": "LOG-0125",
+    "timestamp": "2025-03-22T06:24:00",
+    "equipment_id": "COMP-13",
+    "fault_category": "electrical_fault",
+    "log_text": "loose lug on terminal A1, discoloration in the utilities building.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 288
+  },
+  {
+    "log_id": "LOG-0110",
+    "timestamp": "2024-09-06T16:34:00",
+    "equipment_id": "DRIVE-LINE5-A",
+    "fault_category": "electrical_fault",
+    "log_text": "aux contact pitted on pump skid 4.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 318
+  },
+  {
+    "log_id": "LOG-0202",
+    "timestamp": "2024-10-03T16:48:00",
+    "equipment_id": "DRIVE-LINE3-B",
+    "fault_category": "software_anomaly",
+    "log_text": "recipe download failed checksum on the cooling tower fan.",
+    "resolution": "Forced step to advance, patched logic for missing flag, retested batch.",
+    "downtime_minutes": 91
+  },
+  {
+    "log_id": "LOG-0064",
+    "timestamp": "2024-01-21T15:05:00",
+    "equipment_id": "GEARBOX-24",
+    "fault_category": "lubrication_issue",
+    "log_text": "At the conveyor head pulley: no oil flow indicated at the pump.",
+    "resolution": "Refilled and reset auto-luber, verified grease delivery at the point.",
+    "downtime_minutes": 21
+  },
+  {
+    "log_id": "LOG-0196",
+    "timestamp": "2024-09-28T11:35:00",
+    "equipment_id": "PLC-RACK-06",
+    "fault_category": "software_anomaly",
+    "log_text": "In the utilities building: batch sequence stuck on step 3. alarm flood from a single stuck bit.",
+    "resolution": "Restarted IO scanner, comms restored, added watchdog alarm.",
+    "downtime_minutes": 44
+  },
+  {
+    "log_id": "LOG-0087",
+    "timestamp": "2025-04-18T22:14:00",
+    "equipment_id": "RTD-REACT-12",
+    "fault_category": "lubrication_issue",
+    "log_text": "At the conveyor head pulley: oil sample high particle count, ISO out of spec.",
+    "resolution": "Changed oil and filter, took fresh sample, dP back to normal.",
+    "downtime_minutes": 133
+  },
+  {
+    "log_id": "LOG-0192",
+    "timestamp": "2023-10-04T22:23:00",
+    "equipment_id": "EXTRUDER-5",
+    "fault_category": "software_anomaly",
+    "log_text": "On extruder 6: driver mismatch after firmware update.",
+    "resolution": "Restarted IO scanner, comms restored, added watchdog alarm.",
+    "downtime_minutes": 73
+  },
+  {
+    "log_id": "LOG-0212",
+    "timestamp": "2024-01-15T08:28:00",
+    "equipment_id": "DRIVE-LINE3-A",
+    "fault_category": "software_anomaly",
+    "log_text": "On pump skid 2: alarm flood from a single stuck bit. OPC server lost connection intermittently.",
+    "resolution": "Cycled OPC server, reseated network, monitored for recurrence.",
+    "downtime_minutes": 188
+  },
+  {
+    "log_id": "LOG-0106",
+    "timestamp": "2024-07-13T21:51:00",
+    "equipment_id": "CONV-BELT-02",
+    "fault_category": "electrical_fault",
+    "log_text": "On extruder 1: VFD tripped on overcurrent, fault F030.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 219
+  },
+  {
+    "log_id": "LOG-0013",
+    "timestamp": "2023-08-01T08:17:00",
+    "equipment_id": "GEARBOX-13",
+    "fault_category": "bearing_fault",
+    "log_text": "In the mixing area: outer race spalling suspected.",
+    "resolution": "Pressed in new bearing, checked fit and clearance, returned to service.",
+    "downtime_minutes": 108
+  },
+  {
+    "log_id": "LOG-0220",
+    "timestamp": "2024-06-08T09:32:00",
+    "equipment_id": "PLC-RACK-03",
+    "fault_category": "software_anomaly",
+    "log_text": "On the palletizer: PLC comms dropout to remote IO, watchdog timeout.",
+    "resolution": "Restarted IO scanner, comms restored, added watchdog alarm.",
+    "downtime_minutes": 52
+  },
+  {
+    "log_id": "LOG-0144",
+    "timestamp": "2025-10-21T19:40:00",
+    "equipment_id": "MOTOR-19",
+    "fault_category": "calibration_drift",
+    "log_text": "flow transmitter reading 8% high vs reference. pH probe slow and offset on the main compressor.",
+    "resolution": "Re-zeroed and trimmed span, loop verified against reference.",
+    "downtime_minutes": 105
+  },
+  {
+    "log_id": "LOG-0124",
+    "timestamp": "2024-04-14T22:34:00",
+    "equipment_id": "EXTRUDER-2",
+    "fault_category": "electrical_fault",
+    "log_text": "ground fault on feeder, trip on close. motor megger 1.7 Mohm, marginal at the reactor feed.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 302
+  },
+  {
+    "log_id": "LOG-0038",
+    "timestamp": "2024-12-01T07:55:00",
+    "equipment_id": "VFD-LINE1",
+    "fault_category": "bearing_fault",
+    "log_text": "NDE bearing vibration up to 9.9 mm/s RMS. rumble at the drive end at the conveyor head pulley.",
+    "resolution": "Repacked grease, monitored temp, scheduled bearing change at next PM.",
+    "downtime_minutes": 477
+  },
+  {
+    "log_id": "LOG-0153",
+    "timestamp": "2025-05-18T06:49:00",
+    "equipment_id": "GEARBOX-13",
+    "fault_category": "calibration_drift",
+    "log_text": "4-20 loop reads low at 50% span at the reactor feed.",
+    "resolution": "Re-zeroed and trimmed span, loop verified against reference.",
+    "downtime_minutes": 109
+  },
+  {
+    "log_id": "LOG-0052",
+    "timestamp": "2024-05-15T22:12:00",
+    "equipment_id": "DRIVE-LINE3-A",
+    "fault_category": "lubrication_issue",
+    "log_text": "In the utilities building: grease line blocked to bearing.",
+    "resolution": "Changed oil and filter, took fresh sample, dP back to normal.",
+    "downtime_minutes": 170
+  },
+  {
+    "log_id": "LOG-0048",
+    "timestamp": "2023-05-14T17:51:00",
+    "equipment_id": "PLC-RACK-23",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the cooling tower fan: water ingress in sump, oil milky.",
+    "resolution": "Topped up oil, traced and fixed seal weep, logged for reseal.",
+    "downtime_minutes": 131
+  },
+  {
+    "log_id": "LOG-0049",
+    "timestamp": "2025-06-07T21:02:00",
+    "equipment_id": "CONV-BELT-10",
+    "fault_category": "lubrication_issue",
+    "log_text": "In the utilities building: oil sample high particle count, ISO out of spec.",
+    "resolution": "Changed oil and filter, took fresh sample, dP back to normal.",
+    "downtime_minutes": 144
+  },
+  {
+    "log_id": "LOG-0065",
+    "timestamp": "2024-07-21T18:17:00",
+    "equipment_id": "RTD-REACT-01",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the packaging line: gearbox oil level below min on sight glass. oil temp high, viscosity dropping.",
+    "resolution": "Refilled and reset auto-luber, verified grease delivery at the point.",
+    "downtime_minutes": 141
+  },
+  {
+    "log_id": "LOG-0138",
+    "timestamp": "2023-08-16T16:09:00",
+    "equipment_id": "GEARBOX-11",
+    "fault_category": "calibration_drift",
+    "log_text": "On the main compressor: pH probe slow and offset.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 120
+  },
+  {
+    "log_id": "LOG-0209",
+    "timestamp": "2025-07-31T13:47:00",
+    "equipment_id": "CONV-BELT-18",
+    "fault_category": "software_anomaly",
+    "log_text": "PLC comms dropout to remote IO, watchdog timeout. HMI froze, recovered on restart on extruder 4.",
+    "resolution": "Restarted IO scanner, comms restored, added watchdog alarm.",
+    "downtime_minutes": 203
+  },
+  {
+    "log_id": "LOG-0126",
+    "timestamp": "2023-02-15T11:59:00",
+    "equipment_id": "VFD-LINE2",
+    "fault_category": "electrical_fault",
+    "log_text": "On line 1 drive: thermal overload would not reset. contactor chattering on starter.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 104
+  },
+  {
+    "log_id": "LOG-0101",
+    "timestamp": "2025-05-31T09:00:00",
+    "equipment_id": "PLC-RACK-07",
+    "fault_category": "electrical_fault",
+    "log_text": "phase imbalance ~6% on the palletizer.",
+    "resolution": "Megger retest after dry-out, motor back in spec, reset VFD.",
+    "downtime_minutes": 88
+  },
+  {
+    "log_id": "LOG-0129",
+    "timestamp": "2023-09-24T19:42:00",
+    "equipment_id": "DRIVE-LINE6-A",
+    "fault_category": "electrical_fault",
+    "log_text": "On line 1 drive: thermal overload would not reset.",
+    "resolution": "Replaced contactor, checked coil voltage, no further chatter.",
+    "downtime_minutes": 128
+  },
+  {
+    "log_id": "LOG-0179",
+    "timestamp": "2025-03-02T21:31:00",
+    "equipment_id": "CONV-BELT-11",
+    "fault_category": "calibration_drift",
+    "log_text": "On the cooling tower fan: temp RTD showing 3C offset vs handheld. zero drifted, last cal 18 months ago.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 81
+  },
+  {
+    "log_id": "LOG-0005",
+    "timestamp": "2023-09-09T20:35:00",
+    "equipment_id": "GEARBOX-07",
+    "fault_category": "bearing_fault",
+    "log_text": "On the cooling tower fan: audible growl at 1480 rpm.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 466
+  },
+  {
+    "log_id": "LOG-0004",
+    "timestamp": "2024-09-19T09:56:00",
+    "equipment_id": "COMP-22",
+    "fault_category": "bearing_fault",
+    "log_text": "On line 6 drive: vibration band 2x line freq elevated.",
+    "resolution": "Repacked grease, monitored temp, scheduled bearing change at next PM.",
+    "downtime_minutes": 279
+  },
+  {
+    "log_id": "LOG-0128",
+    "timestamp": "2025-07-15T11:41:00",
+    "equipment_id": "GEARBOX-22",
+    "fault_category": "electrical_fault",
+    "log_text": "loose lug on terminal B2, discoloration on the cooling tower fan.",
+    "resolution": "Replaced contactor, checked coil voltage, no further chatter.",
+    "downtime_minutes": 320
+  },
+  {
+    "log_id": "LOG-0036",
+    "timestamp": "2024-05-21T18:17:00",
+    "equipment_id": "GEARBOX-03",
+    "fault_category": "bearing_fault",
+    "log_text": "On the cooling tower fan: metal flake in grease purge.",
+    "resolution": "Pressed in new bearing, checked fit and clearance, returned to service.",
+    "downtime_minutes": 304
+  },
+  {
+    "log_id": "LOG-0218",
+    "timestamp": "2024-05-04T11:00:00",
+    "equipment_id": "CONV-BELT-02",
+    "fault_category": "software_anomaly",
+    "log_text": "driver mismatch after firmware update on the packaging line.",
+    "resolution": "Restarted IO scanner, comms restored, added watchdog alarm.",
+    "downtime_minutes": 139
+  },
+  {
+    "log_id": "LOG-0131",
+    "timestamp": "2024-01-08T08:10:00",
+    "equipment_id": "COMP-18",
+    "fault_category": "electrical_fault",
+    "log_text": "encoder signal dropping, drive faults on extruder 4.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 160
+  },
+  {
+    "log_id": "LOG-0042",
+    "timestamp": "2023-08-02T06:10:00",
+    "equipment_id": "RTD-REACT-03",
+    "fault_category": "bearing_fault",
+    "log_text": "audible growl at 1180 rpm. bearing noise rises under load at the conveyor head pulley.",
+    "resolution": "Repacked grease, monitored temp, scheduled bearing change at next PM.",
+    "downtime_minutes": 460
+  },
+  {
+    "log_id": "LOG-0151",
+    "timestamp": "2024-07-01T15:45:00",
+    "equipment_id": "VFD-LINE2",
+    "fault_category": "calibration_drift",
+    "log_text": "pH probe slow and offset. pressure tx span out of trim on pump skid 3.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 90
+  },
+  {
+    "log_id": "LOG-0173",
+    "timestamp": "2024-11-25T16:19:00",
+    "equipment_id": "EXTRUDER-4",
+    "fault_category": "calibration_drift",
+    "log_text": "temp RTD showing 4C offset vs handheld on the main compressor.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 80
+  },
+  {
+    "log_id": "LOG-0091",
+    "timestamp": "2024-05-12T10:00:00",
+    "equipment_id": "PLC-RACK-05",
+    "fault_category": "electrical_fault",
+    "log_text": "On the main compressor: loose lug on terminal T3, discoloration.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 87
+  },
+  {
+    "log_id": "LOG-0166",
+    "timestamp": "2023-09-16T12:28:00",
+    "equipment_id": "DRIVE-LINE6-B",
+    "fault_category": "calibration_drift",
+    "log_text": "On the cooling tower fan: flow transmitter reading 5% high vs reference.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 57
+  },
+  {
+    "log_id": "LOG-0057",
+    "timestamp": "2024-03-09T14:08:00",
+    "equipment_id": "CONV-BELT-10",
+    "fault_category": "lubrication_issue",
+    "log_text": "no oil flow indicated at the pump at the reactor feed.",
+    "resolution": "Cleared blocked grease line, purged bearing, confirmed flow.",
+    "downtime_minutes": 109
+  },
+  {
+    "log_id": "LOG-0080",
+    "timestamp": "2024-09-01T11:44:00",
+    "equipment_id": "EXTRUDER-5",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the cooling tower fan: gearbox oil level below min on sight glass.",
+    "resolution": "Refilled and reset auto-luber, verified grease delivery at the point.",
+    "downtime_minutes": 143
+  },
+  {
+    "log_id": "LOG-0168",
+    "timestamp": "2023-10-24T18:23:00",
+    "equipment_id": "CONV-BELT-02",
+    "fault_category": "calibration_drift",
+    "log_text": "On the cooling tower fan: level reading creeping vs manual dip.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 19
+  },
+  {
+    "log_id": "LOG-0119",
+    "timestamp": "2023-04-17T18:57:00",
+    "equipment_id": "PUMP-SKID-15",
+    "fault_category": "electrical_fault",
+    "log_text": "loose lug on terminal A1, discoloration at the conveyor head pulley.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 197
+  },
+  {
+    "log_id": "LOG-0099",
+    "timestamp": "2025-06-20T22:16:00",
+    "equipment_id": "RTD-REACT-14",
+    "fault_category": "electrical_fault",
+    "log_text": "On the palletizer: thermal overload would not reset.",
+    "resolution": "Megger retest after dry-out, motor back in spec, reset VFD.",
+    "downtime_minutes": 355
+  },
+  {
+    "log_id": "LOG-0082",
+    "timestamp": "2025-03-24T08:15:00",
+    "equipment_id": "RTD-REACT-24",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the main compressor: water ingress in sump, oil milky.",
+    "resolution": "Changed oil and filter, took fresh sample, dP back to normal.",
+    "downtime_minutes": 94
+  },
+  {
+    "log_id": "LOG-0130",
+    "timestamp": "2024-02-29T10:55:00",
+    "equipment_id": "PUMP-SKID-19",
+    "fault_category": "electrical_fault",
+    "log_text": "At the conveyor head pulley: loose lug on terminal A1, discoloration.",
+    "resolution": "Megger retest after dry-out, motor back in spec, reset VFD.",
+    "downtime_minutes": 177
+  },
+  {
+    "log_id": "LOG-0223",
+    "timestamp": "2025-12-17T06:26:00",
+    "equipment_id": "DRIVE-LINE6-B",
+    "fault_category": "software_anomaly",
+    "log_text": "On extruder 2: SCADA tag quality bad on 12 points. OPC server lost connection intermittently.",
+    "resolution": "Forced step to advance, patched logic for missing flag, retested batch.",
+    "downtime_minutes": 144
+  },
+  {
+    "log_id": "LOG-0027",
+    "timestamp": "2025-07-16T21:16:00",
+    "equipment_id": "EXTRUDER-1",
+    "fault_category": "bearing_fault",
+    "log_text": "On the palletizer: metal flake in grease purge. rumble at the drive end.",
+    "resolution": "Replaced bearing, re-greased to spec, vibration back to 4.1 mm/s.",
+    "downtime_minutes": 355
+  },
+  {
+    "log_id": "LOG-0063",
+    "timestamp": "2023-03-22T11:24:00",
+    "equipment_id": "EXTRUDER-5",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the packaging line: water ingress in sump, oil milky.",
+    "resolution": "Changed oil and filter, took fresh sample, dP back to normal.",
+    "downtime_minutes": 29
+  },
+  {
+    "log_id": "LOG-0142",
+    "timestamp": "2023-03-30T13:44:00",
+    "equipment_id": "PLC-RACK-18",
+    "fault_category": "calibration_drift",
+    "log_text": "In the utilities building: pressure tx span out of trim.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 73
+  },
+  {
+    "log_id": "LOG-0141",
+    "timestamp": "2025-11-24T10:49:00",
+    "equipment_id": "CONV-BELT-08",
+    "fault_category": "calibration_drift",
+    "log_text": "On line 1 drive: pressure tx span out of trim.",
+    "resolution": "Recalibrated transmitter, updated cal record, within tolerance.",
+    "downtime_minutes": 35
+  },
+  {
+    "log_id": "LOG-0023",
+    "timestamp": "2025-10-17T09:49:00",
+    "equipment_id": "COMP-15",
+    "fault_category": "bearing_fault",
+    "log_text": "rumble at the drive end on extruder 5.",
+    "resolution": "Replaced bearing, re-greased to spec, vibration back to 5.4 mm/s.",
+    "downtime_minutes": 229
+  },
+  {
+    "log_id": "LOG-0121",
+    "timestamp": "2023-02-13T06:21:00",
+    "equipment_id": "PUMP-SKID-07",
+    "fault_category": "electrical_fault",
+    "log_text": "intermittent drop-out under load at the reactor feed.",
+    "resolution": "Swapped heater element, verified current draw balanced.",
+    "downtime_minutes": 233
+  },
+  {
+    "log_id": "LOG-0139",
+    "timestamp": "2024-08-09T06:44:00",
+    "equipment_id": "GEARBOX-19",
+    "fault_category": "calibration_drift",
+    "log_text": "At the conveyor head pulley: level reading creeping vs manual dip.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 34
+  },
+  {
+    "log_id": "LOG-0162",
+    "timestamp": "2023-02-10T17:13:00",
+    "equipment_id": "MOTOR-24",
+    "fault_category": "calibration_drift",
+    "log_text": "At the reactor feed: zero drifted, last cal 14 months ago.",
+    "resolution": "Re-zeroed and trimmed span, loop verified against reference.",
+    "downtime_minutes": 27
+  },
+  {
+    "log_id": "LOG-0098",
+    "timestamp": "2025-10-23T20:17:00",
+    "equipment_id": "EXTRUDER-1",
+    "fault_category": "electrical_fault",
+    "log_text": "contactor chattering on starter in the utilities building.",
+    "resolution": "Replaced contactor, checked coil voltage, no further chatter.",
+    "downtime_minutes": 331
+  },
+  {
+    "log_id": "LOG-0204",
+    "timestamp": "2023-09-05T09:03:00",
+    "equipment_id": "VFD-LINE4",
+    "fault_category": "software_anomaly",
+    "log_text": "On extruder 5: SCADA tag quality bad on 9 points.",
+    "resolution": "Restarted IO scanner, comms restored, added watchdog alarm.",
+    "downtime_minutes": 132
+  },
+  {
+    "log_id": "LOG-0210",
+    "timestamp": "2024-03-28T13:13:00",
+    "equipment_id": "COMP-03",
+    "fault_category": "software_anomaly",
+    "log_text": "timestamp skew between PLC and historian. recipe download failed checksum on the palletizer.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 23
+  },
+  {
+    "log_id": "LOG-0181",
+    "timestamp": "2023-05-17T20:39:00",
+    "equipment_id": "EXTRUDER-1",
+    "fault_category": "software_anomaly",
+    "log_text": "On the palletizer: SCADA tag quality bad on 3 points.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 207
+  },
+  {
+    "log_id": "LOG-0068",
+    "timestamp": "2023-10-26T14:52:00",
+    "equipment_id": "GEARBOX-22",
+    "fault_category": "lubrication_issue",
+    "log_text": "oil dark and overdue for change in the utilities building.",
+    "resolution": "Changed oil and filter, took fresh sample, dP back to normal.",
+    "downtime_minutes": 23
+  },
+  {
+    "log_id": "LOG-0178",
+    "timestamp": "2025-02-27T08:17:00",
+    "equipment_id": "PLC-RACK-02",
+    "fault_category": "calibration_drift",
+    "log_text": "On extruder 2: 4-20 loop reads low at 50% span.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 116
+  },
+  {
+    "log_id": "LOG-0011",
+    "timestamp": "2025-10-22T08:10:00",
+    "equipment_id": "PUMP-SKID-22",
+    "fault_category": "bearing_fault",
+    "log_text": "bearing noise rises under load at the conveyor head pulley.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 381
+  },
+  {
+    "log_id": "LOG-0217",
+    "timestamp": "2025-12-23T22:06:00",
+    "equipment_id": "RTD-REACT-08",
+    "fault_category": "software_anomaly",
+    "log_text": "batch sequence stuck on step 3 on line 2 drive.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 28
+  },
+  {
+    "log_id": "LOG-0127",
+    "timestamp": "2023-04-02T16:09:00",
+    "equipment_id": "PUMP-SKID-12",
+    "fault_category": "electrical_fault",
+    "log_text": "On the packaging line: heater element open, no current draw. phase imbalance ~5%.",
+    "resolution": "Swapped heater element, verified current draw balanced.",
+    "downtime_minutes": 340
+  },
+  {
+    "log_id": "LOG-0164",
+    "timestamp": "2023-03-18T22:13:00",
+    "equipment_id": "VFD-LINE1",
+    "fault_category": "calibration_drift",
+    "log_text": "level reading creeping vs manual dip on the cooling tower fan.",
+    "resolution": "Re-zeroed and trimmed span, loop verified against reference.",
+    "downtime_minutes": 66
+  },
+  {
+    "log_id": "LOG-0010",
+    "timestamp": "2023-07-07T12:20:00",
+    "equipment_id": "DRIVE-LINE2-B",
+    "fault_category": "bearing_fault",
+    "log_text": "housing temp trending up over 6 shifts on line 3 drive.",
+    "resolution": "Replaced bearing, re-greased to spec, vibration back to 7.7 mm/s.",
+    "downtime_minutes": 116
+  },
+  {
+    "log_id": "LOG-0070",
+    "timestamp": "2023-04-20T15:04:00",
+    "equipment_id": "PUMP-SKID-04",
+    "fault_category": "lubrication_issue",
+    "log_text": "On pump skid 1: no oil flow indicated at the pump. grease line blocked to bearing.",
+    "resolution": "Changed oil and filter, took fresh sample, dP back to normal.",
+    "downtime_minutes": 103
+  },
+  {
+    "log_id": "LOG-0078",
+    "timestamp": "2024-04-10T16:35:00",
+    "equipment_id": "PLC-RACK-20",
+    "fault_category": "lubrication_issue",
+    "log_text": "On pump skid 1: filter dP high, bypass open. oil dark and overdue for change.",
+    "resolution": "Topped up oil, traced and fixed seal weep, logged for reseal.",
+    "downtime_minutes": 29
+  },
+  {
+    "log_id": "LOG-0066",
+    "timestamp": "2025-09-28T18:17:00",
+    "equipment_id": "RTD-REACT-06",
+    "fault_category": "lubrication_issue",
+    "log_text": "auto-luber empty, no grease for 3 days. oil temp high, viscosity dropping on the packaging line.",
+    "resolution": "Cleared blocked grease line, purged bearing, confirmed flow.",
+    "downtime_minutes": 83
+  },
+  {
+    "log_id": "LOG-0158",
+    "timestamp": "2023-05-12T07:17:00",
+    "equipment_id": "COMP-18",
+    "fault_category": "calibration_drift",
+    "log_text": "On extruder 2: drift linear across range.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 101
+  },
+  {
+    "log_id": "LOG-0194",
+    "timestamp": "2023-04-01T18:49:00",
+    "equipment_id": "COMP-24",
+    "fault_category": "software_anomaly",
+    "log_text": "batch sequence stuck on step 12 in the mixing area.",
+    "resolution": "Forced step to advance, patched logic for missing flag, retested batch.",
+    "downtime_minutes": 109
+  },
+  {
+    "log_id": "LOG-0183",
+    "timestamp": "2024-12-31T07:47:00",
+    "equipment_id": "CONV-BELT-14",
+    "fault_category": "software_anomaly",
+    "log_text": "recipe download failed checksum on the main compressor.",
+    "resolution": "Cycled OPC server, reseated network, monitored for recurrence.",
+    "downtime_minutes": 201
+  },
+  {
+    "log_id": "LOG-0103",
+    "timestamp": "2024-02-23T06:21:00",
+    "equipment_id": "DRIVE-LINE1-A",
+    "fault_category": "electrical_fault",
+    "log_text": "At the conveyor head pulley: loose lug on terminal L2, discoloration. thermal overload would not reset.",
+    "resolution": "Megger retest after dry-out, motor back in spec, reset VFD.",
+    "downtime_minutes": 353
+  },
+  {
+    "log_id": "LOG-0160",
+    "timestamp": "2025-02-28T17:13:00",
+    "equipment_id": "GEARBOX-04",
+    "fault_category": "calibration_drift",
+    "log_text": "On line 5 drive: pH probe slow and offset. drift linear across range.",
+    "resolution": "Re-zeroed and trimmed span, loop verified against reference.",
+    "downtime_minutes": 103
+  },
+  {
+    "log_id": "LOG-0113",
+    "timestamp": "2024-03-02T12:54:00",
+    "equipment_id": "EXTRUDER-1",
+    "fault_category": "electrical_fault",
+    "log_text": "On the packaging line: encoder signal dropping, drive faults.",
+    "resolution": "Swapped heater element, verified current draw balanced.",
+    "downtime_minutes": 160
+  },
+  {
+    "log_id": "LOG-0214",
+    "timestamp": "2024-04-03T17:03:00",
+    "equipment_id": "VFD-LINE2",
+    "fault_category": "software_anomaly",
+    "log_text": "In the mixing area: timestamp skew between PLC and historian. alarm flood from a single stuck bit.",
+    "resolution": "Forced step to advance, patched logic for missing flag, retested batch.",
+    "downtime_minutes": 169
+  },
+  {
+    "log_id": "LOG-0135",
+    "timestamp": "2023-07-20T15:02:00",
+    "equipment_id": "COMP-20",
+    "fault_category": "electrical_fault",
+    "log_text": "ground fault on feeder, trip on close on the palletizer.",
+    "resolution": "Megger retest after dry-out, motor back in spec, reset VFD.",
+    "downtime_minutes": 327
+  },
+  {
+    "log_id": "LOG-0197",
+    "timestamp": "2024-02-24T18:21:00",
+    "equipment_id": "VFD-LINE6",
+    "fault_category": "software_anomaly",
+    "log_text": "On the main compressor: logic waiting on flag that never set. alarm flood from a single stuck bit.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 13
+  },
+  {
+    "log_id": "LOG-0224",
+    "timestamp": "2023-08-13T09:17:00",
+    "equipment_id": "VFD-LINE6",
+    "fault_category": "software_anomaly",
+    "log_text": "At the reactor feed: SCADA tag quality bad on 8 points.",
+    "resolution": "Forced step to advance, patched logic for missing flag, retested batch.",
+    "downtime_minutes": 88
+  },
+  {
+    "log_id": "LOG-0018",
+    "timestamp": "2024-10-28T06:38:00",
+    "equipment_id": "EXTRUDER-1",
+    "fault_category": "bearing_fault",
+    "log_text": "NDE bearing vibration up to 8.2 mm/s RMS at the reactor feed.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 307
+  },
+  {
+    "log_id": "LOG-0105",
+    "timestamp": "2024-04-12T20:09:00",
+    "equipment_id": "RTD-REACT-01",
+    "fault_category": "electrical_fault",
+    "log_text": "aux contact pitted. heater element open, no current draw in the utilities building.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 294
+  },
+  {
+    "log_id": "LOG-0095",
+    "timestamp": "2024-11-20T13:35:00",
+    "equipment_id": "GEARBOX-22",
+    "fault_category": "electrical_fault",
+    "log_text": "On the cooling tower fan: intermittent drop-out under load.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 262
+  },
+  {
+    "log_id": "LOG-0092",
+    "timestamp": "2025-05-13T20:45:00",
+    "equipment_id": "COMP-01",
+    "fault_category": "electrical_fault",
+    "log_text": "loose lug on terminal L2, discoloration. motor megger 2.3 Mohm, marginal on extruder 3.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 334
+  },
+  {
+    "log_id": "LOG-0075",
+    "timestamp": "2025-12-29T07:33:00",
+    "equipment_id": "DRIVE-LINE4-B",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the main compressor: weep at output seal.",
+    "resolution": "Changed oil and filter, took fresh sample, dP back to normal.",
+    "downtime_minutes": 159
+  },
+  {
+    "log_id": "LOG-0084",
+    "timestamp": "2025-10-03T11:57:00",
+    "equipment_id": "DRIVE-LINE3-B",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the packaging line: no oil flow indicated at the pump.",
+    "resolution": "Cleared blocked grease line, purged bearing, confirmed flow.",
+    "downtime_minutes": 130
+  },
+  {
+    "log_id": "LOG-0117",
+    "timestamp": "2025-03-16T17:14:00",
+    "equipment_id": "COMP-15",
+    "fault_category": "electrical_fault",
+    "log_text": "encoder signal dropping, drive faults on extruder 6.",
+    "resolution": "Replaced contactor, checked coil voltage, no further chatter.",
+    "downtime_minutes": 215
+  },
+  {
+    "log_id": "LOG-0102",
+    "timestamp": "2025-02-04T16:56:00",
+    "equipment_id": "RTD-REACT-09",
+    "fault_category": "electrical_fault",
+    "log_text": "loose lug on terminal C3, discoloration on the main compressor.",
+    "resolution": "Megger retest after dry-out, motor back in spec, reset VFD.",
+    "downtime_minutes": 128
+  },
+  {
+    "log_id": "LOG-0123",
+    "timestamp": "2023-08-31T21:01:00",
+    "equipment_id": "GEARBOX-20",
+    "fault_category": "electrical_fault",
+    "log_text": "contactor chattering on starter. ground fault on feeder, trip on close at the reactor feed.",
+    "resolution": "Swapped heater element, verified current draw balanced.",
+    "downtime_minutes": 202
+  },
+  {
+    "log_id": "LOG-0029",
+    "timestamp": "2024-09-21T19:32:00",
+    "equipment_id": "VFD-LINE3",
+    "fault_category": "bearing_fault",
+    "log_text": "On the packaging line: outer race spalling suspected. metal flake in grease purge.",
+    "resolution": "Replaced bearing, re-greased to spec, vibration back to 8.6 mm/s.",
+    "downtime_minutes": 202
+  },
+  {
+    "log_id": "LOG-0163",
+    "timestamp": "2024-04-03T09:14:00",
+    "equipment_id": "DRIVE-LINE6-B",
+    "fault_category": "calibration_drift",
+    "log_text": "On pump skid 3: analyzer out of spec vs grab sample. drift linear across range.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 55
+  },
+  {
+    "log_id": "LOG-0014",
+    "timestamp": "2024-11-05T09:48:00",
+    "equipment_id": "EXTRUDER-4",
+    "fault_category": "bearing_fault",
+    "log_text": "In the utilities building: housing temp trending up over 4 shifts.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 436
+  },
+  {
+    "log_id": "LOG-0033",
+    "timestamp": "2023-04-26T07:48:00",
+    "equipment_id": "DRIVE-LINE1-A",
+    "fault_category": "bearing_fault",
+    "log_text": "audible growl at 1770 rpm on line 6 drive.",
+    "resolution": "Pressed in new bearing, checked fit and clearance, returned to service.",
+    "downtime_minutes": 219
+  },
+  {
+    "log_id": "LOG-0030",
+    "timestamp": "2023-11-16T21:05:00",
+    "equipment_id": "PLC-RACK-07",
+    "fault_category": "bearing_fault",
+    "log_text": "bearing noise rises under load on the main compressor.",
+    "resolution": "Replaced bearing, re-greased to spec, vibration back to 7.0 mm/s.",
+    "downtime_minutes": 305
+  },
+  {
+    "log_id": "LOG-0024",
+    "timestamp": "2023-03-31T08:42:00",
+    "equipment_id": "EXTRUDER-3",
+    "fault_category": "bearing_fault",
+    "log_text": "axial play felt by hand at the reactor feed.",
+    "resolution": "Replaced bearing, re-greased to spec, vibration back to 5.1 mm/s.",
+    "downtime_minutes": 466
+  },
+  {
+    "log_id": "LOG-0120",
+    "timestamp": "2023-11-19T22:02:00",
+    "equipment_id": "RTD-REACT-22",
+    "fault_category": "electrical_fault",
+    "log_text": "ground fault on feeder, trip on close on the main compressor.",
+    "resolution": "Swapped heater element, verified current draw balanced.",
+    "downtime_minutes": 195
+  },
+  {
+    "log_id": "LOG-0180",
+    "timestamp": "2024-07-27T20:59:00",
+    "equipment_id": "MOTOR-18",
+    "fault_category": "calibration_drift",
+    "log_text": "flow transmitter reading 4% high vs reference on the packaging line.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 61
+  },
+  {
+    "log_id": "LOG-0203",
+    "timestamp": "2025-03-04T18:10:00",
+    "equipment_id": "PUMP-SKID-04",
+    "fault_category": "software_anomaly",
+    "log_text": "On the palletizer: alarm flood from a single stuck bit.",
+    "resolution": "Restarted IO scanner, comms restored, added watchdog alarm.",
+    "downtime_minutes": 155
+  },
+  {
+    "log_id": "LOG-0104",
+    "timestamp": "2024-11-10T08:58:00",
+    "equipment_id": "RTD-REACT-04",
+    "fault_category": "electrical_fault",
+    "log_text": "heater element open, no current draw on the palletizer.",
+    "resolution": "Swapped heater element, verified current draw balanced.",
+    "downtime_minutes": 258
+  },
+  {
+    "log_id": "LOG-0205",
+    "timestamp": "2023-03-15T15:23:00",
+    "equipment_id": "DRIVE-LINE4-B",
+    "fault_category": "software_anomaly",
+    "log_text": "On pump skid 6: batch sequence stuck on step 13.",
+    "resolution": "Cycled OPC server, reseated network, monitored for recurrence.",
+    "downtime_minutes": 101
+  },
+  {
+    "log_id": "LOG-0219",
+    "timestamp": "2025-11-04T14:25:00",
+    "equipment_id": "MOTOR-24",
+    "fault_category": "software_anomaly",
+    "log_text": "At the reactor feed: recipe download failed checksum.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 177
+  },
+  {
+    "log_id": "LOG-0169",
+    "timestamp": "2025-02-18T10:46:00",
+    "equipment_id": "MOTOR-11",
+    "fault_category": "calibration_drift",
+    "log_text": "In the utilities building: flow transmitter reading 2% high vs reference.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 115
+  },
+  {
+    "log_id": "LOG-0067",
+    "timestamp": "2024-10-30T15:38:00",
+    "equipment_id": "PUMP-SKID-21",
+    "fault_category": "lubrication_issue",
+    "log_text": "oil dark and overdue for change. oil temp high, viscosity dropping on the palletizer.",
+    "resolution": "Refilled and reset auto-luber, verified grease delivery at the point.",
+    "downtime_minutes": 178
+  },
+  {
+    "log_id": "LOG-0081",
+    "timestamp": "2023-08-04T06:48:00",
+    "equipment_id": "CONV-BELT-14",
+    "fault_category": "lubrication_issue",
+    "log_text": "auto-luber empty, no grease for 3 days on the packaging line.",
+    "resolution": "Changed oil and filter, took fresh sample, dP back to normal.",
+    "downtime_minutes": 27
+  },
+  {
+    "log_id": "LOG-0072",
+    "timestamp": "2025-01-17T12:31:00",
+    "equipment_id": "GEARBOX-12",
+    "fault_category": "lubrication_issue",
+    "log_text": "On line 5 drive: grease line blocked to bearing.",
+    "resolution": "Changed oil and filter, took fresh sample, dP back to normal.",
+    "downtime_minutes": 41
+  },
+  {
+    "log_id": "LOG-0114",
+    "timestamp": "2024-09-30T13:55:00",
+    "equipment_id": "COMP-04",
+    "fault_category": "electrical_fault",
+    "log_text": "On pump skid 2: thermal overload would not reset. motor megger 3.0 Mohm, marginal.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 115
+  },
+  {
+    "log_id": "LOG-0174",
+    "timestamp": "2023-01-29T16:14:00",
+    "equipment_id": "DRIVE-LINE3-B",
+    "fault_category": "calibration_drift",
+    "log_text": "temp RTD showing 3C offset vs handheld. drift linear across range on the palletizer.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 41
+  },
+  {
+    "log_id": "LOG-0109",
+    "timestamp": "2023-08-13T22:08:00",
+    "equipment_id": "RTD-REACT-04",
+    "fault_category": "electrical_fault",
+    "log_text": "On the packaging line: VFD tripped on overcurrent, fault F059. loose lug on terminal C3, discoloration.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 69
+  },
+  {
+    "log_id": "LOG-0115",
+    "timestamp": "2025-12-10T20:38:00",
+    "equipment_id": "VFD-LINE2",
+    "fault_category": "electrical_fault",
+    "log_text": "VFD tripped on overcurrent, fault F072 on the main compressor.",
+    "resolution": "Replaced contactor, checked coil voltage, no further chatter.",
+    "downtime_minutes": 103
+  },
+  {
+    "log_id": "LOG-0056",
+    "timestamp": "2023-10-04T22:34:00",
+    "equipment_id": "EXTRUDER-4",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the main compressor: water ingress in sump, oil milky. no oil flow indicated at the pump.",
+    "resolution": "Topped up oil, traced and fixed seal weep, logged for reseal.",
+    "downtime_minutes": 163
+  },
+  {
+    "log_id": "LOG-0146",
+    "timestamp": "2023-07-02T16:22:00",
+    "equipment_id": "RTD-REACT-07",
+    "fault_category": "calibration_drift",
+    "log_text": "On the cooling tower fan: temp RTD showing 4C offset vs handheld.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 74
+  },
+  {
+    "log_id": "LOG-0175",
+    "timestamp": "2024-05-08T22:34:00",
+    "equipment_id": "PLC-RACK-15",
+    "fault_category": "calibration_drift",
+    "log_text": "In the mixing area: analyzer out of spec vs grab sample. drift linear across range.",
+    "resolution": "Recalibrated transmitter, updated cal record, within tolerance.",
+    "downtime_minutes": 17
+  },
+  {
+    "log_id": "LOG-0200",
+    "timestamp": "2023-04-09T06:28:00",
+    "equipment_id": "VFD-LINE3",
+    "fault_category": "software_anomaly",
+    "log_text": "On the palletizer: OPC server lost connection intermittently.",
+    "resolution": "Forced step to advance, patched logic for missing flag, retested batch.",
+    "downtime_minutes": 145
+  },
+  {
+    "log_id": "LOG-0199",
+    "timestamp": "2024-10-13T06:55:00",
+    "equipment_id": "CONV-BELT-05",
+    "fault_category": "software_anomaly",
+    "log_text": "In the utilities building: driver mismatch after firmware update.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 228
+  },
+  {
+    "log_id": "LOG-0085",
+    "timestamp": "2025-01-18T09:36:00",
+    "equipment_id": "PLC-RACK-07",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the palletizer: water ingress in sump, oil milky.",
+    "resolution": "Refilled and reset auto-luber, verified grease delivery at the point.",
+    "downtime_minutes": 26
+  },
+  {
+    "log_id": "LOG-0150",
+    "timestamp": "2025-04-02T21:33:00",
+    "equipment_id": "GEARBOX-20",
+    "fault_category": "calibration_drift",
+    "log_text": "At the conveyor head pulley: pH probe slow and offset.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 104
+  },
+  {
+    "log_id": "LOG-0152",
+    "timestamp": "2023-07-11T07:31:00",
+    "equipment_id": "MOTOR-24",
+    "fault_category": "calibration_drift",
+    "log_text": "In the mixing area: pressure tx span out of trim.",
+    "resolution": "Recalibrated transmitter, updated cal record, within tolerance.",
+    "downtime_minutes": 54
+  },
+  {
+    "log_id": "LOG-0136",
+    "timestamp": "2024-03-10T11:16:00",
+    "equipment_id": "DRIVE-LINE5-A",
+    "fault_category": "calibration_drift",
+    "log_text": "load cell off by 23 kg on readback on pump skid 6.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 17
+  },
+  {
+    "log_id": "LOG-0143",
+    "timestamp": "2023-03-25T08:57:00",
+    "equipment_id": "GEARBOX-01",
+    "fault_category": "calibration_drift",
+    "log_text": "analyzer out of spec vs grab sample on the main compressor.",
+    "resolution": "Recalibrated transmitter, updated cal record, within tolerance.",
+    "downtime_minutes": 48
+  },
+  {
+    "log_id": "LOG-0134",
+    "timestamp": "2024-05-14T12:18:00",
+    "equipment_id": "RTD-REACT-05",
+    "fault_category": "electrical_fault",
+    "log_text": "thermal overload would not reset on line 2 drive.",
+    "resolution": "Megger retest after dry-out, motor back in spec, reset VFD.",
+    "downtime_minutes": 106
+  },
+  {
+    "log_id": "LOG-0069",
+    "timestamp": "2023-02-03T18:22:00",
+    "equipment_id": "CONV-BELT-20",
+    "fault_category": "lubrication_issue",
+    "log_text": "In the utilities building: oil dark and overdue for change.",
+    "resolution": "Refilled and reset auto-luber, verified grease delivery at the point.",
+    "downtime_minutes": 36
+  },
+  {
+    "log_id": "LOG-0225",
+    "timestamp": "2024-03-11T20:57:00",
+    "equipment_id": "PUMP-SKID-24",
+    "fault_category": "software_anomaly",
+    "log_text": "alarm flood from a single stuck bit. logic waiting on flag that never set in the mixing area.",
+    "resolution": "Restarted IO scanner, comms restored, added watchdog alarm.",
+    "downtime_minutes": 188
+  },
+  {
+    "log_id": "LOG-0059",
+    "timestamp": "2025-11-18T17:00:00",
+    "equipment_id": "PLC-RACK-05",
+    "fault_category": "lubrication_issue",
+    "log_text": "weep at output seal on line 3 drive.",
+    "resolution": "Refilled and reset auto-luber, verified grease delivery at the point.",
+    "downtime_minutes": 70
+  },
+  {
+    "log_id": "LOG-0112",
+    "timestamp": "2025-07-20T16:01:00",
+    "equipment_id": "CONV-BELT-03",
+    "fault_category": "electrical_fault",
+    "log_text": "loose lug on terminal C3, discoloration in the mixing area.",
+    "resolution": "Re-terminated lug, torqued to spec, thermal scan clean after.",
+    "downtime_minutes": 55
+  },
+  {
+    "log_id": "LOG-0172",
+    "timestamp": "2023-02-24T14:26:00",
+    "equipment_id": "CONV-BELT-13",
+    "fault_category": "calibration_drift",
+    "log_text": "On the palletizer: pH probe slow and offset.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 83
+  },
+  {
+    "log_id": "LOG-0107",
+    "timestamp": "2023-08-03T09:54:00",
+    "equipment_id": "PUMP-SKID-05",
+    "fault_category": "electrical_fault",
+    "log_text": "VFD tripped on overcurrent, fault F047 on extruder 1.",
+    "resolution": "Swapped heater element, verified current draw balanced.",
+    "downtime_minutes": 218
+  },
+  {
+    "log_id": "LOG-0185",
+    "timestamp": "2023-12-18T10:34:00",
+    "equipment_id": "COMP-03",
+    "fault_category": "software_anomaly",
+    "log_text": "In the mixing area: driver mismatch after firmware update.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 175
+  },
+  {
+    "log_id": "LOG-0019",
+    "timestamp": "2025-11-03T17:04:00",
+    "equipment_id": "GEARBOX-15",
+    "fault_category": "bearing_fault",
+    "log_text": "On the cooling tower fan: rumble at the drive end.",
+    "resolution": "Repacked grease, monitored temp, scheduled bearing change at next PM.",
+    "downtime_minutes": 414
+  },
+  {
+    "log_id": "LOG-0055",
+    "timestamp": "2025-10-17T17:45:00",
+    "equipment_id": "RTD-REACT-23",
+    "fault_category": "lubrication_issue",
+    "log_text": "oil temp high, viscosity dropping. water ingress in sump, oil milky on the main compressor.",
+    "resolution": "Cleared blocked grease line, purged bearing, confirmed flow.",
+    "downtime_minutes": 137
+  },
+  {
+    "log_id": "LOG-0182",
+    "timestamp": "2024-07-10T16:26:00",
+    "equipment_id": "PUMP-SKID-10",
+    "fault_category": "software_anomaly",
+    "log_text": "On pump skid 6: driver mismatch after firmware update. batch sequence stuck on step 4.",
+    "resolution": "Restarted IO scanner, comms restored, added watchdog alarm.",
+    "downtime_minutes": 12
+  },
+  {
+    "log_id": "LOG-0022",
+    "timestamp": "2024-08-22T08:23:00",
+    "equipment_id": "PUMP-SKID-09",
+    "fault_category": "bearing_fault",
+    "log_text": "outer race spalling suspected. bearing noise rises under load in the utilities building.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 146
+  },
+  {
+    "log_id": "LOG-0028",
+    "timestamp": "2024-09-04T17:49:00",
+    "equipment_id": "CONV-BELT-04",
+    "fault_category": "bearing_fault",
+    "log_text": "housing temp trending up over 4 shifts on the packaging line.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 334
+  },
+  {
+    "log_id": "LOG-0108",
+    "timestamp": "2023-05-11T07:34:00",
+    "equipment_id": "VFD-LINE1",
+    "fault_category": "electrical_fault",
+    "log_text": "On the main compressor: thermal overload would not reset.",
+    "resolution": "Megger retest after dry-out, motor back in spec, reset VFD.",
+    "downtime_minutes": 197
+  },
+  {
+    "log_id": "LOG-0215",
+    "timestamp": "2023-10-30T19:36:00",
+    "equipment_id": "PUMP-SKID-08",
+    "fault_category": "software_anomaly",
+    "log_text": "On the packaging line: logic waiting on flag that never set.",
+    "resolution": "Cycled OPC server, reseated network, monitored for recurrence.",
+    "downtime_minutes": 94
+  },
+  {
+    "log_id": "LOG-0137",
+    "timestamp": "2023-05-12T12:08:00",
+    "equipment_id": "RTD-REACT-18",
+    "fault_category": "calibration_drift",
+    "log_text": "On the main compressor: load cell off by 5 kg on readback.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 120
+  },
+  {
+    "log_id": "LOG-0195",
+    "timestamp": "2025-10-21T17:57:00",
+    "equipment_id": "RTD-REACT-07",
+    "fault_category": "software_anomaly",
+    "log_text": "On the packaging line: batch sequence stuck on step 5.",
+    "resolution": "Forced step to advance, patched logic for missing flag, retested batch.",
+    "downtime_minutes": 184
+  },
+  {
+    "log_id": "LOG-0096",
+    "timestamp": "2023-02-19T19:56:00",
+    "equipment_id": "DRIVE-LINE6-B",
+    "fault_category": "electrical_fault",
+    "log_text": "In the utilities building: loose lug on terminal L2, discoloration. aux contact pitted.",
+    "resolution": "Swapped heater element, verified current draw balanced.",
+    "downtime_minutes": 225
+  },
+  {
+    "log_id": "LOG-0044",
+    "timestamp": "2023-06-14T11:28:00",
+    "equipment_id": "RTD-REACT-07",
+    "fault_category": "bearing_fault",
+    "log_text": "audible growl at 1180 rpm in the mixing area.",
+    "resolution": "Repacked grease, monitored temp, scheduled bearing change at next PM.",
+    "downtime_minutes": 217
+  },
+  {
+    "log_id": "LOG-0002",
+    "timestamp": "2023-01-18T09:43:00",
+    "equipment_id": "PLC-RACK-17",
+    "fault_category": "bearing_fault",
+    "log_text": "On the packaging line: rumble at the drive end.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 133
+  },
+  {
+    "log_id": "LOG-0097",
+    "timestamp": "2025-06-01T22:57:00",
+    "equipment_id": "GEARBOX-11",
+    "fault_category": "electrical_fault",
+    "log_text": "On line 1 drive: heater element open, no current draw.",
+    "resolution": "Swapped heater element, verified current draw balanced.",
+    "downtime_minutes": 338
+  },
+  {
+    "log_id": "LOG-0122",
+    "timestamp": "2023-07-12T15:15:00",
+    "equipment_id": "GEARBOX-24",
+    "fault_category": "electrical_fault",
+    "log_text": "On pump skid 6: motor megger 1.5 Mohm, marginal.",
+    "resolution": "Megger retest after dry-out, motor back in spec, reset VFD.",
+    "downtime_minutes": 172
+  },
+  {
+    "log_id": "LOG-0213",
+    "timestamp": "2023-03-30T18:08:00",
+    "equipment_id": "CONV-BELT-21",
+    "fault_category": "software_anomaly",
+    "log_text": "At the conveyor head pulley: PLC comms dropout to remote IO, watchdog timeout. logic waiting on flag that never set.",
+    "resolution": "Restarted IO scanner, comms restored, added watchdog alarm.",
+    "downtime_minutes": 211
+  },
+  {
+    "log_id": "LOG-0017",
+    "timestamp": "2023-05-06T16:38:00",
+    "equipment_id": "CONV-BELT-21",
+    "fault_category": "bearing_fault",
+    "log_text": "metal flake in grease purge on line 1 drive.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 136
+  },
+  {
+    "log_id": "LOG-0177",
+    "timestamp": "2024-03-24T06:14:00",
+    "equipment_id": "VFD-LINE2",
+    "fault_category": "calibration_drift",
+    "log_text": "temp RTD showing 5C offset vs handheld at the conveyor head pulley.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 97
+  },
+  {
+    "log_id": "LOG-0040",
+    "timestamp": "2025-10-06T15:10:00",
+    "equipment_id": "MOTOR-04",
+    "fault_category": "bearing_fault",
+    "log_text": "On the palletizer: bearing noise rises under load.",
+    "resolution": "Replaced bearing, re-greased to spec, vibration back to 7.3 mm/s.",
+    "downtime_minutes": 207
+  },
+  {
+    "log_id": "LOG-0111",
+    "timestamp": "2024-05-09T20:35:00",
+    "equipment_id": "GEARBOX-03",
+    "fault_category": "electrical_fault",
+    "log_text": "heater element open, no current draw. thermal overload would not reset in the utilities building.",
+    "resolution": "Replaced contactor, checked coil voltage, no further chatter.",
+    "downtime_minutes": 45
+  },
+  {
+    "log_id": "LOG-0176",
+    "timestamp": "2025-02-16T09:51:00",
+    "equipment_id": "COMP-09",
+    "fault_category": "calibration_drift",
+    "log_text": "On pump skid 2: 4-20 loop reads low at 50% span.",
+    "resolution": "Re-zeroed and trimmed span, loop verified against reference.",
+    "downtime_minutes": 71
+  },
+  {
+    "log_id": "LOG-0077",
+    "timestamp": "2023-04-16T19:53:00",
+    "equipment_id": "PLC-RACK-03",
+    "fault_category": "lubrication_issue",
+    "log_text": "In the mixing area: no oil flow indicated at the pump.",
+    "resolution": "Cleared blocked grease line, purged bearing, confirmed flow.",
+    "downtime_minutes": 66
+  },
+  {
+    "log_id": "LOG-0221",
+    "timestamp": "2025-02-06T16:07:00",
+    "equipment_id": "COMP-09",
+    "fault_category": "software_anomaly",
+    "log_text": "timestamp skew between PLC and historian on the palletizer.",
+    "resolution": "Cycled OPC server, reseated network, monitored for recurrence.",
+    "downtime_minutes": 232
+  },
+  {
+    "log_id": "LOG-0094",
+    "timestamp": "2023-04-03T21:07:00",
+    "equipment_id": "MOTOR-12",
+    "fault_category": "electrical_fault",
+    "log_text": "In the mixing area: heater element open, no current draw.",
+    "resolution": "Megger retest after dry-out, motor back in spec, reset VFD.",
+    "downtime_minutes": 95
+  },
+  {
+    "log_id": "LOG-0053",
+    "timestamp": "2024-04-03T11:02:00",
+    "equipment_id": "PLC-RACK-24",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the packaging line: oil sample high particle count, ISO out of spec. auto-luber empty, no grease for 5 days.",
+    "resolution": "Topped up oil, traced and fixed seal weep, logged for reseal.",
+    "downtime_minutes": 49
+  },
+  {
+    "log_id": "LOG-0193",
+    "timestamp": "2023-02-25T21:30:00",
+    "equipment_id": "DRIVE-LINE4-B",
+    "fault_category": "software_anomaly",
+    "log_text": "logic waiting on flag that never set. alarm flood from a single stuck bit on the palletizer.",
+    "resolution": "Restarted IO scanner, comms restored, added watchdog alarm.",
+    "downtime_minutes": 110
+  },
+  {
+    "log_id": "LOG-0186",
+    "timestamp": "2024-06-14T14:02:00",
+    "equipment_id": "GEARBOX-12",
+    "fault_category": "software_anomaly",
+    "log_text": "alarm flood from a single stuck bit in the utilities building.",
+    "resolution": "Forced step to advance, patched logic for missing flag, retested batch.",
+    "downtime_minutes": 13
+  },
+  {
+    "log_id": "LOG-0031",
+    "timestamp": "2023-01-25T13:13:00",
+    "equipment_id": "DRIVE-LINE2-B",
+    "fault_category": "bearing_fault",
+    "log_text": "On the cooling tower fan: vibration band 2x line freq elevated.",
+    "resolution": "Repacked grease, monitored temp, scheduled bearing change at next PM.",
+    "downtime_minutes": 375
+  },
+  {
+    "log_id": "LOG-0009",
+    "timestamp": "2023-06-13T19:23:00",
+    "equipment_id": "EXTRUDER-3",
+    "fault_category": "bearing_fault",
+    "log_text": "On line 5 drive: NDE bearing vibration up to 9.0 mm/s RMS. DE bearing running hot at 90C.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 449
+  },
+  {
+    "log_id": "LOG-0035",
+    "timestamp": "2023-06-08T10:05:00",
+    "equipment_id": "CONV-BELT-13",
+    "fault_category": "bearing_fault",
+    "log_text": "In the mixing area: inner race defect freq present in FFT.",
+    "resolution": "Replaced bearing, re-greased to spec, vibration back to 10.3 mm/s.",
+    "downtime_minutes": 231
+  },
+  {
+    "log_id": "LOG-0159",
+    "timestamp": "2023-10-05T20:29:00",
+    "equipment_id": "DRIVE-LINE3-A",
+    "fault_category": "calibration_drift",
+    "log_text": "On the cooling tower fan: analyzer out of spec vs grab sample.",
+    "resolution": "Replaced drifting RTD, calibrated loop, offset cleared.",
+    "downtime_minutes": 102
+  },
+  {
+    "log_id": "LOG-0058",
+    "timestamp": "2025-10-09T12:20:00",
+    "equipment_id": "PLC-RACK-03",
+    "fault_category": "lubrication_issue",
+    "log_text": "filter dP high, bypass open on the palletizer.",
+    "resolution": "Refilled and reset auto-luber, verified grease delivery at the point.",
+    "downtime_minutes": 123
+  },
+  {
+    "log_id": "LOG-0116",
+    "timestamp": "2025-08-26T19:56:00",
+    "equipment_id": "DRIVE-LINE5-B",
+    "fault_category": "electrical_fault",
+    "log_text": "On the cooling tower fan: aux contact pitted.",
+    "resolution": "Megger retest after dry-out, motor back in spec, reset VFD.",
+    "downtime_minutes": 305
+  },
+  {
+    "log_id": "LOG-0170",
+    "timestamp": "2025-09-07T11:02:00",
+    "equipment_id": "COMP-17",
+    "fault_category": "calibration_drift",
+    "log_text": "On the palletizer: zero drifted, last cal 11 months ago.",
+    "resolution": "Recalibrated transmitter, updated cal record, within tolerance.",
+    "downtime_minutes": 19
+  },
+  {
+    "log_id": "LOG-0016",
+    "timestamp": "2023-07-09T20:05:00",
+    "equipment_id": "EXTRUDER-2",
+    "fault_category": "bearing_fault",
+    "log_text": "axial play felt by hand. NDE bearing vibration up to 4.2 mm/s RMS on the palletizer.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 98
+  },
+  {
+    "log_id": "LOG-0118",
+    "timestamp": "2023-10-19T19:49:00",
+    "equipment_id": "GEARBOX-08",
+    "fault_category": "electrical_fault",
+    "log_text": "encoder signal dropping, drive faults on the packaging line.",
+    "resolution": "Swapped heater element, verified current draw balanced.",
+    "downtime_minutes": 242
+  },
+  {
+    "log_id": "LOG-0076",
+    "timestamp": "2023-08-22T11:55:00",
+    "equipment_id": "CONV-BELT-09",
+    "fault_category": "lubrication_issue",
+    "log_text": "At the reactor feed: grease line blocked to bearing.",
+    "resolution": "Topped up oil, traced and fixed seal weep, logged for reseal.",
+    "downtime_minutes": 21
+  },
+  {
+    "log_id": "LOG-0034",
+    "timestamp": "2023-03-14T08:43:00",
+    "equipment_id": "MOTOR-22",
+    "fault_category": "bearing_fault",
+    "log_text": "metal flake in grease purge at the reactor feed.",
+    "resolution": "Repacked grease, monitored temp, scheduled bearing change at next PM.",
+    "downtime_minutes": 257
+  },
+  {
+    "log_id": "LOG-0207",
+    "timestamp": "2023-05-09T13:46:00",
+    "equipment_id": "EXTRUDER-1",
+    "fault_category": "software_anomaly",
+    "log_text": "On the packaging line: alarm flood from a single stuck bit.",
+    "resolution": "Forced step to advance, patched logic for missing flag, retested batch.",
+    "downtime_minutes": 74
+  },
+  {
+    "log_id": "LOG-0054",
+    "timestamp": "2024-07-11T06:55:00",
+    "equipment_id": "EXTRUDER-5",
+    "fault_category": "lubrication_issue",
+    "log_text": "On line 4 drive: gearbox oil level below min on sight glass.",
+    "resolution": "Refilled and reset auto-luber, verified grease delivery at the point.",
+    "downtime_minutes": 60
+  },
+  {
+    "log_id": "LOG-0051",
+    "timestamp": "2025-01-01T10:47:00",
+    "equipment_id": "MOTOR-04",
+    "fault_category": "lubrication_issue",
+    "log_text": "oil dark and overdue for change on pump skid 4.",
+    "resolution": "Cleared blocked grease line, purged bearing, confirmed flow.",
+    "downtime_minutes": 71
+  },
+  {
+    "log_id": "LOG-0046",
+    "timestamp": "2025-01-26T16:11:00",
+    "equipment_id": "PLC-RACK-19",
+    "fault_category": "lubrication_issue",
+    "log_text": "At the conveyor head pulley: gearbox oil level below min on sight glass.",
+    "resolution": "Cleared blocked grease line, purged bearing, confirmed flow.",
+    "downtime_minutes": 101
+  },
+  {
+    "log_id": "LOG-0188",
+    "timestamp": "2025-05-19T11:25:00",
+    "equipment_id": "COMP-04",
+    "fault_category": "software_anomaly",
+    "log_text": "On the packaging line: HMI froze, recovered on restart.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 122
+  },
+  {
+    "log_id": "LOG-0012",
+    "timestamp": "2024-11-08T21:05:00",
+    "equipment_id": "RTD-REACT-09",
+    "fault_category": "bearing_fault",
+    "log_text": "At the conveyor head pulley: bearing noise rises under load.",
+    "resolution": "Repacked grease, monitored temp, scheduled bearing change at next PM.",
+    "downtime_minutes": 479
+  },
+  {
+    "log_id": "LOG-0189",
+    "timestamp": "2025-06-11T07:29:00",
+    "equipment_id": "COMP-24",
+    "fault_category": "software_anomaly",
+    "log_text": "SCADA tag quality bad on 7 points. batch sequence stuck on step 7 on line 6 drive.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 69
+  },
+  {
+    "log_id": "LOG-0060",
+    "timestamp": "2023-01-29T22:40:00",
+    "equipment_id": "DRIVE-LINE6-A",
+    "fault_category": "lubrication_issue",
+    "log_text": "water ingress in sump, oil milky. oil temp high, viscosity dropping on the packaging line.",
+    "resolution": "Refilled and reset auto-luber, verified grease delivery at the point.",
+    "downtime_minutes": 164
+  },
+  {
+    "log_id": "LOG-0041",
+    "timestamp": "2023-08-06T13:17:00",
+    "equipment_id": "EXTRUDER-3",
+    "fault_category": "bearing_fault",
+    "log_text": "NDE bearing vibration up to 5.5 mm/s RMS at the conveyor head pulley.",
+    "resolution": "Replaced bearing, re-greased to spec, vibration back to 10.3 mm/s.",
+    "downtime_minutes": 369
+  },
+  {
+    "log_id": "LOG-0211",
+    "timestamp": "2025-06-05T14:59:00",
+    "equipment_id": "PLC-RACK-03",
+    "fault_category": "software_anomaly",
+    "log_text": "In the utilities building: OPC server lost connection intermittently.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 158
+  },
+  {
+    "log_id": "LOG-0045",
+    "timestamp": "2024-05-10T13:01:00",
+    "equipment_id": "MOTOR-19",
+    "fault_category": "bearing_fault",
+    "log_text": "audible growl at 2950 rpm in the mixing area.",
+    "resolution": "Pressed in new bearing, checked fit and clearance, returned to service.",
+    "downtime_minutes": 179
+  },
+  {
+    "log_id": "LOG-0050",
+    "timestamp": "2024-09-28T22:01:00",
+    "equipment_id": "EXTRUDER-4",
+    "fault_category": "lubrication_issue",
+    "log_text": "weep at output seal. gearbox oil level below min on sight glass on extruder 1.",
+    "resolution": "Cleared blocked grease line, purged bearing, confirmed flow.",
+    "downtime_minutes": 90
+  },
+  {
+    "log_id": "LOG-0071",
+    "timestamp": "2025-06-06T10:06:00",
+    "equipment_id": "DRIVE-LINE6-A",
+    "fault_category": "lubrication_issue",
+    "log_text": "On the palletizer: grease line blocked to bearing.",
+    "resolution": "Cleared blocked grease line, purged bearing, confirmed flow.",
+    "downtime_minutes": 174
+  },
+  {
+    "log_id": "LOG-0171",
+    "timestamp": "2023-12-30T22:06:00",
+    "equipment_id": "GEARBOX-22",
+    "fault_category": "calibration_drift",
+    "log_text": "On the palletizer: temp RTD showing 4C offset vs handheld.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 45
+  },
+  {
+    "log_id": "LOG-0006",
+    "timestamp": "2024-06-21T16:27:00",
+    "equipment_id": "COMP-11",
+    "fault_category": "bearing_fault",
+    "log_text": "On the main compressor: metal flake in grease purge.",
+    "resolution": "Repacked grease, monitored temp, scheduled bearing change at next PM.",
+    "downtime_minutes": 179
+  },
+  {
+    "log_id": "LOG-0147",
+    "timestamp": "2023-04-23T12:42:00",
+    "equipment_id": "VFD-LINE4",
+    "fault_category": "calibration_drift",
+    "log_text": "pH probe slow and offset. level reading creeping vs manual dip on extruder 6.",
+    "resolution": "Recalibrated transmitter, updated cal record, within tolerance.",
+    "downtime_minutes": 50
+  },
+  {
+    "log_id": "LOG-0161",
+    "timestamp": "2024-12-06T06:10:00",
+    "equipment_id": "DRIVE-LINE4-B",
+    "fault_category": "calibration_drift",
+    "log_text": "At the reactor feed: pH probe slow and offset.",
+    "resolution": "Re-trimmed load cell span, weight readback matched test weights.",
+    "downtime_minutes": 72
+  },
+  {
+    "log_id": "LOG-0025",
+    "timestamp": "2025-03-15T10:19:00",
+    "equipment_id": "CONV-BELT-18",
+    "fault_category": "bearing_fault",
+    "log_text": "On the packaging line: DE bearing running hot at 74C.",
+    "resolution": "Replaced bearing, re-greased to spec, vibration back to 8.5 mm/s.",
+    "downtime_minutes": 197
+  },
+  {
+    "log_id": "LOG-0190",
+    "timestamp": "2025-10-02T08:21:00",
+    "equipment_id": "RTD-REACT-13",
+    "fault_category": "software_anomaly",
+    "log_text": "recipe download failed checksum. alarm flood from a single stuck bit on the main compressor.",
+    "resolution": "Reloaded matching driver, tag quality good, documented firmware rev.",
+    "downtime_minutes": 163
+  },
+  {
+    "log_id": "LOG-0007",
+    "timestamp": "2025-12-17T22:29:00",
+    "equipment_id": "DRIVE-LINE2-A",
+    "fault_category": "bearing_fault",
+    "log_text": "rumble at the drive end. metal flake in grease purge at the reactor feed.",
+    "resolution": "Pressed in new bearing, checked fit and clearance, returned to service.",
+    "downtime_minutes": 160
+  },
+  {
+    "log_id": "LOG-0043",
+    "timestamp": "2024-04-27T16:05:00",
+    "equipment_id": "PLC-RACK-18",
+    "fault_category": "bearing_fault",
+    "log_text": "On extruder 4: outer race spalling suspected.",
+    "resolution": "Swapped DE bearing and seal, aligned coupling, retested ok.",
+    "downtime_minutes": 341
+  }
+]

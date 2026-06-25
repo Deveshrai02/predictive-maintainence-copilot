@@ -1,4 +1,3 @@
-"""Generate synthetic maintenance logs for training the classifier."""
 """
 generate_logs.py — Synthetic maintenance-log generator for a fault classifier.
 
@@ -30,7 +29,10 @@ from datetime import datetime, timedelta
 # Reproducible output. Change/remove the seed for fresh variety.
 RNG = random.Random(42)
 
-OUT_PATH = "data/maintenance_logs/historical_logs.json"
+OUT_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "..", "data", "maintenance_logs", "historical_logs.json",
+)
 PER_CATEGORY = 45  # >= 40 required; 5 * 45 = 225 total
 
 CATEGORIES = [
