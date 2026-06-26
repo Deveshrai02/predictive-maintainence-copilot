@@ -9,7 +9,6 @@ from typing_extensions import TypedDict
 from langchain_core.messages import (
     SystemMessage, HumanMessage, AIMessage, ToolMessage, BaseMessage,
 )
-from langchain_anthropic import ChatAnthropic
 from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
@@ -21,10 +20,24 @@ from app.tools import TOOLS
 # --------------------------------------------------------------------------- #
 # Configuration
 # --------------------------------------------------------------------------- #
-# Default to the most capable Opus model; override via the ANTHROPIC_MODEL env
-# var. For a cheaper/faster agent loop (closer to the original Bedrock Haiku),
-# set ANTHROPIC_MODEL=claude-haiku-4-5.
-ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-opus-4-8")
+# --- LLM provider switch -----------------------------------------------------
+# DEPLOYMENT_MODE selects which backend the agent's LLM uses, so the SAME graph
+# runs both on free hosting and on the AWS architecture:
+#   * "anthropic" (default; used on Hugging Face Spaces) — calls Claude directly
+#     via langchain-anthropic using the ANTHROPIC_API_KEY secret. No AWS needed.
+#   * "bedrock" — calls Claude via AWS Bedrock using langchain-aws + AWS creds.
+#     Kept so the original AWS/Bedrock architecture stays demonstrable.
+DEPLOYMENT_MODE = os.getenv("DEPLOYMENT_MODE", "anthropic")
+
+# Anthropic-API model. NOTE: the brief asked for "claude-3-5-haiku-latest", but
+# Claude 3.5 Haiku was retired on the Anthropic API (2026-02-19) and would 404.
+# We default to its documented successor, claude-haiku-4-5 (override via env).
+ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-haiku-4-5")
+
+# Bedrock model id (used only when DEPLOYMENT_MODE=bedrock).
+BEDROCK_MODEL_ID = os.getenv("BEDROCK_MODEL_ID", "anthropic.claude-haiku-4-5")
+AWS_REGION = os.getenv("AWS_REGION", "us-east-1")
+
 MAX_ITERATIONS = 3          # max self-reflection loops before we stop
 CONFIDENCE_THRESHOLD = 6    # >= this ends the graph; < this triggers a re-loop
 
@@ -69,9 +82,24 @@ class AgentState(TypedDict):
 # Bedrock models (one with tools for the agent, one plain for reflection)
 # --------------------------------------------------------------------------- #
 def _make_llm():
-    # Reads ANTHROPIC_API_KEY from the environment. We deliberately do NOT set
-    # temperature/top_p: Opus 4.7/4.8 reject sampling params with a 400. If you
-    # switch ANTHROPIC_MODEL to an older model and want determinism, add it back.
+    """Build the chat model for the active DEPLOYMENT_MODE.
+
+    Provider packages are imported lazily so a deployment only needs the one it
+    actually uses (e.g. Spaces ships without langchain-aws/boto3).
+    """
+    if DEPLOYMENT_MODE == "bedrock":
+        # AWS path — kept so the Bedrock architecture stays demonstrable.
+        from langchain_aws import ChatBedrockConverse
+        return ChatBedrockConverse(
+            model=BEDROCK_MODEL_ID,
+            region_name=AWS_REGION,
+            max_tokens=1024,
+        )
+
+    # Default: Anthropic API (Hugging Face Spaces). Reads ANTHROPIC_API_KEY from
+    # the environment. We don't set temperature — newer Claude models reject
+    # sampling params; Claude reads fine without it.
+    from langchain_anthropic import ChatAnthropic
     return ChatAnthropic(
         model=ANTHROPIC_MODEL,
         max_tokens=1024,
@@ -294,7 +322,9 @@ def run_agent(equipment_id: str, log_entry: Optional[str] = None) -> dict:
         mlflow.log_params({
             "equipment_id": equipment_id,
             "log_entry": (log_entry or "")[:250],  # params have length limits
-            "model_id": ANTHROPIC_MODEL,
+            "deployment_mode": DEPLOYMENT_MODE,
+            "model_id": BEDROCK_MODEL_ID if DEPLOYMENT_MODE == "bedrock"
+            else ANTHROPIC_MODEL,
         })
 
         # recursion_limit must comfortably exceed our 3 loops x (agent+tools).

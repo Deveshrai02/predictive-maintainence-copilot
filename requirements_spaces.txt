@@ -1,0 +1,35 @@
+# Requirements for the Hugging Face Spaces (Streamlit) deployment.
+# Single container, CPU-only, no GPU and no AWS dependencies.
+#
+# Install locally with:  pip install -r requirements_spaces.txt
+# (Hugging Face Spaces installs this automatically if you rename it to
+#  requirements.txt in the Space, or point the Space at it.)
+
+# --- CPU-only PyTorch (no CUDA) — keeps the image small and GPU-free ---
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+
+# --- NLP / inference ---
+transformers
+sentence-transformers          # in-process embeddings for embedded Weaviate
+
+# --- Data ---
+pandas
+numpy
+
+# --- Vector store (runs EMBEDDED / in-process, no separate container) ---
+weaviate-client
+
+# --- Agent orchestration & LLM (Anthropic API only — no langchain-aws/boto3) ---
+langgraph
+langchain
+langchain-core
+langchain-anthropic
+
+# --- Experiment tracking / LLMOps tracing (writes to local ./mlruns on Spaces) ---
+mlflow
+
+# --- UI & config ---
+streamlit
+python-dotenv
+pydantic

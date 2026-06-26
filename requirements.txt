@@ -18,6 +18,7 @@ boto3
 
 # Vector store
 weaviate-client
+sentence-transformers  # in-process embeddings for embedded Weaviate
 
 # Experiment tracking
 mlflow

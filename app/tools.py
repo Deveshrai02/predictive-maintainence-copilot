@@ -6,29 +6,14 @@ LangChain's @tool so the agent can bind them and call them by name. The
 docstrings matter: the LLM reads them to decide when to use each tool.
 """
 
-import os
 from typing import Optional
-from urllib.parse import urlparse
 
 from langchain_core.tools import tool
 
 from app import classifier
 from app import anomaly_detector
-
-# --------------------------------------------------------------------------- #
-# Weaviate connection helper (v4 client)
-# --------------------------------------------------------------------------- #
-WEAVIATE_URL = os.getenv("WEAVIATE_URL", "http://localhost:8080")
-COLLECTION_NAME = "MaintenanceLog"
-
-
-def _connect_weaviate():
-    """Open a short-lived connection to the local Weaviate instance."""
-    import weaviate
-    parsed = urlparse(WEAVIATE_URL)
-    host = parsed.hostname or "localhost"
-    port = parsed.port or 8080
-    return weaviate.connect_to_local(host=host, port=port, grpc_port=50051)
+# Shared Weaviate client (embedded by default) + in-process embedding helper.
+from app.weaviate_client import get_client, embed_one, COLLECTION_NAME
 
 
 # --------------------------------------------------------------------------- #
@@ -67,11 +52,12 @@ def retrieve_similar_incidents(
     """
     from weaviate.classes.query import Filter, MetadataQuery
 
-    # Connect INSIDE the try so a Weaviate outage degrades to an error result
+    # Everything inside the try so a Weaviate hiccup degrades to an error result
     # the agent can reason about, instead of crashing the whole diagnosis.
-    client = None
     try:
-        client = _connect_weaviate()
+        # Shared, long-lived embedded client — do NOT close it here (closing the
+        # embedded client would stop the in-process Weaviate server).
+        client = get_client()
         collection = client.collections.get(COLLECTION_NAME)
 
         # If a category was given, add a server-side WHERE filter so we only
@@ -80,8 +66,10 @@ def retrieve_similar_incidents(
         if fault_category:
             filters = Filter.by_property("fault_category").equal(fault_category)
 
-        response = collection.query.near_text(
-            query=query,
+        # Embed the query with the same local model used at ingest time, then
+        # search by vector (embedded mode has no server-side vectoriser).
+        response = collection.query.near_vector(
+            near_vector=embed_one(query),
             limit=k,
             filters=filters,
             return_metadata=MetadataQuery(certainty=True),
@@ -103,9 +91,6 @@ def retrieve_similar_incidents(
         return incidents
     except Exception as exc:  # noqa: BLE001 - degrade gracefully for the agent
         return [{"error": f"retrieval unavailable: {exc}"}]
-    finally:
-        if client is not None:
-            client.close()
 
 
 # --------------------------------------------------------------------------- #

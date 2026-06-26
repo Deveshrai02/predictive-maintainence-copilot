@@ -24,6 +24,18 @@ MODEL_NAME = "maintenance-fault-classifier"
 # Where to look, in priority order: prefer Production, fall back to Staging.
 _STAGE_PRIORITY = ["Production", "Staging"]
 
+# Fallback location: a fine-tuned model directory bundled in the repo. Used when
+# the MLflow registry is unreachable — e.g. on Hugging Face Spaces, where no
+# MLflow server runs. This lets the demo run standalone while local/production
+# still load from the MLflow registry (the path above).
+LOCAL_MODEL_DIR = os.getenv(
+    "CLASSIFIER_LOCAL_DIR",
+    os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        "models", "maintenance-classifier",
+    ),
+)
+
 # In-memory cache. None = not loaded yet; False = tried and failed (don't retry
 # on every call). Anything else is the loaded HF pipeline.
 _PIPELINE = None
@@ -67,9 +79,27 @@ def _load_pipeline():
         # ready-to-use Hugging Face text-classification pipeline.
         _PIPELINE = mlflow.transformers.load_model(model_uri)
         _LOADED_STAGE = stage
-        print(f"[classifier] loaded '{MODEL_NAME}' from stage '{stage}'.")
+        print(f"[classifier] loaded '{MODEL_NAME}' from MLflow stage '{stage}'.")
+        return _PIPELINE
+    except Exception as exc:  # noqa: BLE001 - registry unreachable -> try local
+        print(f"[classifier] MLflow registry unavailable ({exc}); "
+              f"trying local model dir...")
+
+    # Fallback: load the bundled fine-tuned model straight from disk with a
+    # plain transformers pipeline (no MLflow needed). This is the Spaces path.
+    try:
+        if not os.path.isdir(LOCAL_MODEL_DIR):
+            raise FileNotFoundError(f"{LOCAL_MODEL_DIR} not found")
+        from transformers import pipeline
+        _PIPELINE = pipeline(
+            "text-classification",
+            model=LOCAL_MODEL_DIR,
+            tokenizer=LOCAL_MODEL_DIR,
+        )
+        _LOADED_STAGE = "local"
+        print(f"[classifier] loaded model from local dir '{LOCAL_MODEL_DIR}'.")
     except Exception as exc:  # noqa: BLE001 - any failure should be soft
-        print(f"[classifier] could not load model: {exc}")
+        print(f"[classifier] could not load model from MLflow or local dir: {exc}")
         _PIPELINE = False
         return None
     return _PIPELINE

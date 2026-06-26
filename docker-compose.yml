@@ -5,9 +5,11 @@ services:
       - "8000:8000"
     env_file:
       - .env
-    # Inside the compose network, reach Weaviate by service name (overrides any
-    # localhost value in .env, which only applies when running on the host).
+    # Production path: use the managed Weaviate cluster (this service), NOT the
+    # embedded in-process mode the Spaces deployment uses. Reach it by service
+    # name inside the compose network.
     environment:
+      - WEAVIATE_MODE=cluster
       - WEAVIATE_URL=http://weaviate:8080
     depends_on:
       - weaviate
@@ -20,6 +22,7 @@ services:
     env_file:
       - .env
     environment:
+      - WEAVIATE_MODE=cluster
       - WEAVIATE_URL=http://weaviate:8080
     depends_on:
       - weaviate

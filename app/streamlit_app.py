@@ -22,9 +22,10 @@ import pandas as pd
 import streamlit as st
 
 # These imports pull in the model/agent stack. anomaly_detector loads the CSV
-# at import; agent builds the Bedrock client + LangGraph graph at import.
+# at import; agent builds the LLM client + LangGraph graph at import.
 from app.anomaly_detector import check_anomaly, get_recent_trend
 from app.agent import run_agent
+from ingest import load_weaviate  # cold-start re-ingestion of the vector store
 
 # --------------------------------------------------------------------------- #
 # Page config + light professional styling
@@ -34,6 +35,25 @@ st.set_page_config(
     page_icon="🛠️",
     layout="wide",
 )
+
+
+# --------------------------------------------------------------------------- #
+# Cold-start knowledge-base initialisation
+# --------------------------------------------------------------------------- #
+# We run embedded Weaviate in-process. Its data lives on the container's
+# ephemeral disk, which is WIPED every time a sleeping Hugging Face Space wakes
+# up — so the "MaintenanceLog" collection is empty on every cold start. If we
+# didn't repopulate it, the agent's retrieve_similar_incidents tool would return
+# nothing and diagnoses would be ungrounded. So on startup we check whether the
+# collection has data and, if not, re-ingest the bundled historical_logs.json.
+# @st.cache_resource ensures this runs ONCE per process (not on every rerun),
+# and its spinner shows the one-time "Initialising knowledge base..." message.
+@st.cache_resource(show_spinner="Initialising knowledge base...")
+def _init_knowledge_base() -> int:
+    return load_weaviate.ensure_populated()
+
+
+_KB_RECORDS = _init_knowledge_base()
 
 # A little CSS for a clean, professional look (cards + severity badges).
 st.markdown("""
