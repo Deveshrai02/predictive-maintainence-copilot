@@ -40,3 +40,7 @@ mlartifacts/
 .DS_Store
 .idea/
 .vscode/
+
+# Local HF Space staging dir + Space clone (separate git repos)
+hf-space/
+Predictive-maintainence-copilot/

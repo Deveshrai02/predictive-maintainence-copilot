@@ -1,3 +1,19 @@
+---
+title: Predictive Maintenance Copilot
+emoji: 🛠️
+colorFrom: blue
+colorTo: gray
+sdk: streamlit
+app_file: app/streamlit_app.py
+pinned: false
+---
+
+<!-- The YAML block above configures the Hugging Face Space (SDK + entry point).
+     It is ignored on GitHub. On the Space, replace requirements.txt with the
+     contents of requirements_spaces.txt (CPU-only torch, no AWS), and set the
+     ANTHROPIC_API_KEY secret + DEPLOYMENT_MODE=anthropic variable. See the
+     "Deploy to Hugging Face Spaces" section below. -->
+
 # Predictive Maintenance Copilot
 
 An AI copilot for industrial predictive maintenance. It combines a fine-tuned
